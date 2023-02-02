@@ -5,7 +5,7 @@ const Projetos = () => {
     <div>
       <div>Projetos</div>
     </div>
-  )
-}
+  );
+};
 
 export default Projetos;

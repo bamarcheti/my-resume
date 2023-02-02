@@ -5,9 +5,9 @@ const SobreMim = () => {
     <div className="flex flex-col">
       <div className="flex flex-wrap justify-between">
         <MainTitle title="Sobre mim" />
-      </div>      
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default SobreMim;

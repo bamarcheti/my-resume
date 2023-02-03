@@ -1,16 +1,16 @@
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import RoutesURL from '../_shared/Routes.enum';
 import MainLayout from '../components/MainLayout';
-import Projetos from '../modules/Projetos';
-import SobreMim from '../modules/SobreMim';
+import About from '../modules/About';
+import Projects from '../modules/Projects';
 
 const AppRoutes: React.FC = () => {
   return (
     <HashRouter>
       <MainLayout>
         <Routes>
-          <Route path={RoutesURL.SOBRE_MIM} element={<SobreMim />} />
-          <Route path={RoutesURL.PROJETOS} element={<Projetos />} />
+          <Route index path={RoutesURL.SOBRE_MIM} element={<About />} />
+          <Route path={RoutesURL.PROJETOS} element={<Projects />} />
         </Routes>
       </MainLayout>
     </HashRouter>

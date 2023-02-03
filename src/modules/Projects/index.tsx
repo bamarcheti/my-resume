@@ -1,4 +1,4 @@
-import MainTitle from '../../components/MainTitle';
+import MainTitle from '../../components/Title/MainTitle';
 
 const Projects = () => {
   return (

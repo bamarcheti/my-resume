@@ -31,14 +31,14 @@ const MainLayout: React.FC<Props> = ({ children }) => {
             <div className="flex flex-row xl:px-0 md:px-10 px-3 py-2 items-center justify-start sm:justify-center flex-wrap">
               <ul className="hidden sm:flex px-4">
                 <div className="hidden md:flex place-content-end gap-2">
+                  <Link to={RoutesURL.SOBRE_MIM} rel="noreferrer">
+                    <li className="cursor-pointer hover:text-indigo-300 transition-all font-medium rounded py-1 px-3 ease-in-out">
+                      Sobre mim
+                    </li>
+                  </Link>
                   <Link to={RoutesURL.PROJETOS} rel="noreferrer">
                     <li className="cursor-pointer hover:text-indigo-300 transition-all font-medium rounded py-1 px-3 ease-in-out">
                       Projetos
-                    </li>
-                  </Link>
-                  <Link to={RoutesURL.SOBRE_MIM} rel="noreferrer">
-                    <li className="cursor-pointer hover:text-indigo-300 transition-all font-medium rounded py-1 px-3 ease-in-out">
-                      Sobre Mim
                     </li>
                   </Link>
                 </div>
@@ -83,15 +83,15 @@ const MainLayout: React.FC<Props> = ({ children }) => {
             >
               <li
                 className="cursor-pointer hover:bg-stone-100 hover:text-indigo-300 hover:font-semibold transition-all ease-in-out w-full py-5 rounded"
-                onClick={() => navigate(RoutesURL.PROJETOS)}
-              >
-                Projetos
-              </li>
-              <li
-                className="cursor-pointer hover:bg-stone-100 hover:text-indigo-300 hover:font-semibold transition-all ease-in-out w-full py-5 rounded"
                 onClick={() => navigate(RoutesURL.SOBRE_MIM)}
               >
                 Sobre mim
+              </li>
+              <li
+                className="cursor-pointer hover:bg-stone-100 hover:text-indigo-300 hover:font-semibold transition-all ease-in-out w-full py-5 rounded"
+                onClick={() => navigate(RoutesURL.PROJETOS)}
+              >
+                Projetos
               </li>
             </ul>
           </div>

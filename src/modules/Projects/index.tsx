@@ -1,6 +1,6 @@
 import MainTitle from '../../components/MainTitle';
 
-const Projetos = () => {
+const Projects = () => {
   return (
     <div className="flex flex-col">
       <div className="flex flex-wrap justify-between">
@@ -10,4 +10,4 @@ const Projetos = () => {
   );
 };
 
-export default Projetos;
+export default Projects;

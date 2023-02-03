@@ -1,9 +1,11 @@
-import React from "react";
+import MainTitle from '../../components/MainTitle';
 
 const Projetos = () => {
   return (
-    <div>
-      <div>Projetos</div>
+    <div className="flex flex-col">
+      <div className="flex flex-wrap justify-between">
+        <MainTitle title="Projetos" />
+      </div>
     </div>
   );
 };

@@ -6,6 +6,7 @@
     "@testing-library/user-event": "^14.4.3",
     "editorconfig": "^1.0.1",
     "eslint": "^8.33.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "prettier": "2.8.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -17,7 +18,10 @@
     "start": "react-scripts start",
     "build": "tsc",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint ./",
+    "format": "prettier --write ./src",
+    "lintFix": "eslint ./ --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -38,11 +42,14 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",
     "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.2",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-react": "^7.32.2",
     "postcss": "^8.4.20",

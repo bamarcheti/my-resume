@@ -1,8 +1,8 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
-import RoutesURL from "../_shared/Routes.enum";
-import MainLayout from "../components/MainLayout";
-import Projetos from "../modules/Projetos";
-import SobreMim from "../modules/SobreMim";
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import RoutesURL from '../_shared/Routes.enum';
+import MainLayout from '../components/MainLayout';
+import Projetos from '../modules/Projetos';
+import SobreMim from '../modules/SobreMim';
 
 const AppRoutes: React.FC = () => {
   return (

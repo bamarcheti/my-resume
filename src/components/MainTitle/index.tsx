@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 type Props = {
   title: string;
@@ -6,8 +6,8 @@ type Props = {
 
 const MainTitle: React.FC<Props> = ({ title }) => {
   return (
-    <div className="sm:py-5 py-3">
-      <span className="font-semibold text-xl text-teal-600">{title}</span>
+    <div className="sm:py-1 py-3">
+      <span className="font-bold text-3xl text-indigo-600">{title}</span>
     </div>
   );
 };

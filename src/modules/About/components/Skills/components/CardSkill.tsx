@@ -1,13 +1,17 @@
-import React from 'react';
+import { Action } from './StrongSkill';
 
 type Props = {
-  nameSkill: string;
+  skillItens: Action[];
 };
 
-const CardSkill: React.FC<Props> = ({ nameSkill }) => {
+const CardSkill = ({ skillItens }: Props) => {
   return (
-    <div className="flex flex-col text-center">
-      <p className="front-semibold text-base text-white bg-card p-3 rounded-3xl">{nameSkill}</p>
+    <div className="flex flex-wrap gap-3 text-center">
+      {skillItens.map((skillItens, index) => (
+        <p key={index} className="front-semibold text-base text-white bg-card p-3 rounded-3xl">
+          {skillItens.nameSkill}
+        </p>
+      ))}
     </div>
   );
 };

@@ -37,7 +37,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
         } `}
       >
         <div
-          className={`w-full shadow-lg text-white
+          className={`w-full flex justify-center shadow-lg text-white
           ${open ? 'bg-default text-white' : 'bg-default shadow-lg'}`}
         >
           <div className="xl:max-w-7xl lg:max-w-full sm:max-w-xl max-w-xs min-w-min">

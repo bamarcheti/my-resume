@@ -1,5 +1,6 @@
 import MainTitle from '../../components/Title/MainTitle';
 import AcademicGraduation from './components/AcademicGraduation';
+import Description from './components/Description';
 import Experience from './components/Experience';
 import ExtraQualifications from './components/ExtraQualifications';
 import Links from './components/Links';
@@ -18,7 +19,10 @@ const About = () => {
           <p className="font-semibold text-2xl text-[#A259FF]">Junior Front-end Developer</p>
         </div>
       </div>
-      <div className="m-12">
+      <div className="mt-12">
+        <Description />
+      </div>
+      <div className="mt-6">
         <Skills />
       </div>
       <div className="mt-6">

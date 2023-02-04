@@ -1,5 +1,5 @@
 enum RoutesURL {
-  SOBRE_MIM = '/sobre-mim',
+  SOBRE_MIM = '/',
   PROJETOS = '/projetos'
 }
 

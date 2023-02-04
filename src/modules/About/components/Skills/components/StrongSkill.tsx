@@ -1,4 +1,4 @@
-import LanguageSkill from './LanguageSkill';
+import LanguageSkill from './CardSkill';
 
 const StrongSkill = () => {
   return (
@@ -6,12 +6,12 @@ const StrongSkill = () => {
       <div className="flex text-start">
         <p className="font-bold text-lg text-white">Strong</p>
       </div>
-      <div className="flex flex-col gap-3 text-center">
-        <LanguageSkill skill="HTML" />
-        <LanguageSkill skill="CSS" />
-        <LanguageSkill skill="GIT" />
-        <LanguageSkill skill="TEAM WORK" />
-        <LanguageSkill skill="AGILE METODOLOGIES" />
+      <div className="flex flex-col gap-3">
+        <LanguageSkill nameSkill="HTML" />
+        <LanguageSkill nameSkill="CSS" />
+        <LanguageSkill nameSkill="GIT" />
+        <LanguageSkill nameSkill="TEAM WORK" />
+        <LanguageSkill nameSkill="AGILE METODOLOGIES" />
       </div>
     </div>
   );

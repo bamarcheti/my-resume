@@ -1,4 +1,4 @@
-import LanguageSkill from './LanguageSkill';
+import CardSkill from './CardSkill';
 
 const AverageSkill = () => {
   return (
@@ -6,13 +6,13 @@ const AverageSkill = () => {
       <div>
         <p className="font-bold text-lg text-white">Average</p>
       </div>
-      <div className="flex flex-col gap-3 text-center">
-        <LanguageSkill skill="JAVASCRIPT" />
-        <LanguageSkill skill="TYPESCRIPT" />
-        <LanguageSkill skill="REACT" />
-        <LanguageSkill skill="HOOKS" />
-        <LanguageSkill skill="UX" />
-        <LanguageSkill skill="UI" />
+      <div className="flex flex-col gap-3">
+        <CardSkill nameSkill="JAVASCRIPT" />
+        <CardSkill nameSkill="TYPESCRIPT" />
+        <CardSkill nameSkill="REACT" />
+        <CardSkill nameSkill="HOOKS" />
+        <CardSkill nameSkill="UX" />
+        <CardSkill nameSkill="UI" />
       </div>
     </div>
   );

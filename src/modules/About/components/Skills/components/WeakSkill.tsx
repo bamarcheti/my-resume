@@ -1,4 +1,4 @@
-import LanguageSkill from './LanguageSkill';
+import LanguageSkill from './CardSkill';
 
 const WeakSkill = () => {
   return (
@@ -6,9 +6,9 @@ const WeakSkill = () => {
       <div>
         <p className="font-bold text-lg text-white">Weak</p>
       </div>
-      <div className="flex flex-col gap-3 text-center">
-        <LanguageSkill skill="NODE" />
-        <LanguageSkill skill="VUE" />
+      <div className="flex flex-col gap-3">
+        <LanguageSkill nameSkill="NODE" />
+        <LanguageSkill nameSkill="VUE" />
       </div>
     </div>
   );

@@ -7,9 +7,7 @@ type Props = {
 const CardSkill: React.FC<Props> = ({ nameSkill }) => {
   return (
     <div className="flex flex-col text-center">
-      <p className="front-semibold text-base text-white bg-[#3B3B3B] p-3 rounded-3xl">
-        {nameSkill}
-      </p>
+      <p className="front-semibold text-base text-white bg-card p-3 rounded-3xl">{nameSkill}</p>
     </div>
   );
 };

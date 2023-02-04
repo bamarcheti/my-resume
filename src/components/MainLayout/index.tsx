@@ -33,12 +33,12 @@ const MainLayout: React.FC<Props> = ({ children }) => {
     <>
       <div
         className={`flex flex-col ${
-          registrationPage ? 'min-h-screen h-full lg:bg-[#2B2B2B]' : 'h-screen'
+          registrationPage ? 'min-h-screen h-full lg:bg-default' : 'h-screen'
         } `}
       >
         <div
           className={`w-full shadow-lg text-white
-          ${open ? 'bg-white text-black' : 'bg-[#2B2B2B] shadow-lg'}`}
+          ${open ? 'bg-default text-white' : 'bg-default shadow-lg'}`}
         >
           <div className="xl:max-w-6xl mx-auto sm:max-w-xl">
             <div className="flex flex-row xl:px-0 md:px-10 px-3 py-2 items-center justify-start sm:justify-center flex-wrap">
@@ -56,11 +56,11 @@ const MainLayout: React.FC<Props> = ({ children }) => {
                   </Link>
                 </div>
               </ul>
-              <div className="md:hidden visible text-right place-content-end">
+              <div className="sm:hidden visible text-right place-content-end">
                 <div onClick={toggleOpen}>
                   {open ? (
                     <svg
-                      className="h-8 w-8 text-black"
+                      className="h-8 w-8 text-white"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -90,18 +90,18 @@ const MainLayout: React.FC<Props> = ({ children }) => {
               </div>
             </div>
             <ul
-              className={`flex flex-col bg-white text-black gap-2 p-2 text-center ${
+              className={`flex flex-col bg-default text-white gap-2 p-2 text-center ${
                 open ? '' : 'hidden'
               }`}
             >
               <li
-                className="cursor-pointer hover:bg-stone-100 hover:text-indigo-300 hover:font-semibold transition-all ease-in-out w-full py-5 rounded"
+                className="cursor-pointer hover:text-indigo-300 transition-all font-medium rounded p-3 ease-in-out"
                 onClick={() => navigate(RoutesURL.SOBRE_MIM)}
               >
                 Sobre mim
               </li>
               <li
-                className="cursor-pointer hover:bg-stone-100 hover:text-indigo-300 hover:font-semibold transition-all ease-in-out w-full py-5 rounded"
+                className="cursor-pointer hover:text-indigo-300 transition-all font-medium rounded p-3 ease-in-out"
                 onClick={() => navigate(RoutesURL.PROJETOS)}
               >
                 Projetos
@@ -110,7 +110,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
           </div>
         </div>
         <div
-          className={`grow w-full xl:max-w-6xl mx-auto xl:px-0 ${registrationPage} md:px-10 px-4 lg:mt-12 rounded-sm lg:max-w-5xl`}
+          className={`grow w-full xl:max-w-6xl mx-2 xl:px-0 ${registrationPage} md:px-10 px-4 mt-6 lg:mt-12 rounded-sm lg:max-w-5xl`}
         >
           {children}
         </div>

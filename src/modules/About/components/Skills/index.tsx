@@ -9,7 +9,7 @@ const Skills = () => {
       <div className="flex flex-col justify-between items-start">
         <Subtitle subtitle="Skills" />
       </div>
-      <div className="flex flex-row gap-20 pl-12">
+      <div className="flex flex-row gap-36 justify-center">
         <StrongSkill />
         <AverageSkill />
         <WeakSkill />

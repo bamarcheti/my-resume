@@ -40,7 +40,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
           className={`w-full shadow-lg text-white
           ${open ? 'bg-default text-white' : 'bg-default shadow-lg'}`}
         >
-          <div className="xl:max-w-7xl lg:max-w-full sm:max-w-xl max-w-xs mx-auto">
+          <div className="xl:max-w-7xl lg:max-w-full sm:max-w-xl max-w-xs min-w-min mx-auto">
             <div className="flex flex-row md:px-10 px-3 py-2 items-center justify-start sm:justify-center flex-wrap">
               <ul className="hidden sm:flex px-4">
                 <div className="hidden md:flex place-content-end gap-2">
@@ -90,7 +90,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
               </div>
             </div>
             <ul
-              className={`flex flex-col bg-default text-white gap-2 p-2 text-center ${
+              className={`flex flex-col bg-default text-white gap-2 p-2 max-w-xs min-w-full text-center ${
                 open ? '' : 'hidden'
               }`}
             >
@@ -110,7 +110,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
           </div>
         </div>
         <div
-          className={`grow justify-center w-full xl:max-w-7xl lg:max-w-full sm:max-w-3xl max-w-xs py-3 xl:p-12 ${registrationPage} md:px-10 px-4 mt-2 rounded-sm lg:px-7`}
+          className={`grow justify-center w-full xl:max-w-full lg:max-w-full sm:max-w-full max-w-full py-3 xl:p-12 ${registrationPage} md:px-10 px-4 mt-2 rounded-sm lg:px-7`}
         >
           {children}
         </div>

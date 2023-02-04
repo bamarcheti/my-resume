@@ -12,7 +12,7 @@ const WeakSkill = () => {
       <div>
         <p className="font-bold text-lg text-white">Weak</p>
       </div>
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col">
         <CardSkill skillItens={skillItens} />
       </div>
     </div>

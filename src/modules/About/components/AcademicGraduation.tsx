@@ -7,8 +7,8 @@ const AcademicGraduation = () => {
       <div className="flex flex-col justify-between items-start">
         <Subtitle subtitle="Academic Graduation / Title" />
       </div>
-      <div className="flex flex-col gap-10 pt-4">
-        <div className="flex flex-row gap-10 justify-center">
+      <div className="flex flex-col pt-4">
+        <div className="flex flex-row gap-10 xl:gap-16 justify-center">
           <Card
             title="Insted / Graduation"
             period="FEBRUARY OF 2021 - JULY OF 2023"

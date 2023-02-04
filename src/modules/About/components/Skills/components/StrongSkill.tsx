@@ -15,7 +15,7 @@ export interface Action {
 const StrongSkill = () => {
   return (
     <div className="flex flex-col gap-3 items-center">
-      <div className="flex text-start">
+      <div>
         <p className="font-bold text-lg text-white">Strong</p>
       </div>
       <div className="flex flex-col">

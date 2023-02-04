@@ -32,25 +32,25 @@ const MainLayout: React.FC<Props> = ({ children }) => {
   return (
     <>
       <div
-        className={`flex flex-col ${
-          registrationPage ? 'min-h-screen h-full lg:bg-default' : 'h-screen'
+        className={`flex flex-col w-full ${
+          registrationPage ? 'max-h-screen h-auto lg:bg-default' : 'h-screen'
         } `}
       >
         <div
           className={`w-full shadow-lg text-white
           ${open ? 'bg-default text-white' : 'bg-default shadow-lg'}`}
         >
-          <div className="xl:max-w-6xl mx-auto sm:max-w-xl">
-            <div className="flex flex-row xl:px-0 md:px-10 px-3 py-2 items-center justify-start sm:justify-center flex-wrap">
+          <div className="xl:max-w-7xl lg:max-w-full sm:max-w-xl max-w-xs mx-auto">
+            <div className="flex flex-row md:px-10 px-3 py-2 items-center justify-start sm:justify-center flex-wrap">
               <ul className="hidden sm:flex px-4">
                 <div className="hidden md:flex place-content-end gap-2">
                   <Link to={RoutesURL.SOBRE_MIM} rel="noreferrer">
-                    <li className="cursor-pointer hover:text-indigo-300 transition-all font-medium rounded py-1 px-3 ease-in-out">
+                    <li className="cursor-pointer hover:text-indigo-300 xl:text-2xl lg:text-xl transition-all font-medium rounded py-1 px-3 ease-in-out">
                       Sobre mim
                     </li>
                   </Link>
                   <Link to={RoutesURL.PROJETOS} rel="noreferrer">
-                    <li className="cursor-pointer hover:text-indigo-300 transition-all font-medium rounded py-1 px-3 ease-in-out">
+                    <li className="cursor-pointer hover:text-indigo-300 xl:text-2xl lg:text-xl transition-all font-medium rounded py-1 px-3 ease-in-out">
                       Projetos
                     </li>
                   </Link>
@@ -110,7 +110,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
           </div>
         </div>
         <div
-          className={`grow w-full xl:max-w-6xl mx-2 xl:px-0 ${registrationPage} md:px-10 px-4 mt-6 lg:mt-12 rounded-sm lg:max-w-5xl`}
+          className={`grow justify-center w-full xl:max-w-7xl lg:max-w-full sm:max-w-3xl max-w-xs py-3 xl:p-12 ${registrationPage} md:px-10 px-4 mt-2 rounded-sm lg:px-7`}
         >
           {children}
         </div>

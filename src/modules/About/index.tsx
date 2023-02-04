@@ -2,7 +2,7 @@ import MainTitle from '../../components/Title/MainTitle';
 import AcademicGraduation from './components/AcademicGraduation';
 import Experience from './components/Experience';
 import ExtraQualifications from './components/ExtraQualifications';
-import Skills from './components/Skills';
+import Skills from './components/Skills/index';
 
 const About = () => {
   return (

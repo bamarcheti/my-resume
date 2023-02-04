@@ -6,7 +6,7 @@ const Description = () => {
       <div className="flex flex-col justify-between items-start">
         <Subtitle subtitle="Description" />
       </div>
-      <div className="flex flex-col gap-10 pt-4 lg:pt-2">
+      <div className="flex flex-col gap-10 pt-0 lg:pt-2">
         <p className="font-normal text-white text-base lg:text-lg text-left">
           I work for a year as a programmer. I started with Vue.js and then with React.js, in the
           I’m on we use React.js and Tailwind, some of the libs are Headless UI, react-router-dom

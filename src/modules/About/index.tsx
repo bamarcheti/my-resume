@@ -11,7 +11,7 @@ const About = () => {
     <div className="flex flex-col justify-center">
       <div className="flex flex-col justify-between">
         <MainTitle title="Bárbara Marcheti Fiorin" />
-        <div className="flex flex-col py-3">
+        <div className="flex flex-col sm:py-3">
           <p className="font-normal text-base text-primary">Brazilian, single, 20 years old</p>
           <p className="font-normal text-base text-primary">Campo Grande, Mato Grosso do Sul</p>
         </div>
@@ -21,22 +21,22 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="mt-9">
+      <div className="sm:mt-9 mt-6">
         <Description />
       </div>
-      <div className="mt-9">
+      <div className="sm:mt-9 mt-6">
         <Skills />
       </div>
-      <div className="mt-9">
+      <div className="sm:mt-9 mt-6">
         <AcademicGraduation />
       </div>
-      <div className="mt-9">
+      <div className="sm:mt-9 mt-6">
         <Experience />
       </div>
-      <div className="mt-9">
+      <div className="sm:mt-9 mt-6">
         <ExtraQualifications />
       </div>
-      <div className="mt-9">
+      <div className="sm:mt-9 mt-6">
         <Links />
       </div>
     </div>

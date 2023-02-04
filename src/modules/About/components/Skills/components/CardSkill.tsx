@@ -6,9 +6,9 @@ type Props = {
 
 const CardSkill = ({ skillItens }: Props) => {
   return (
-    <div className="flex flex-wrap gap-2 text-center justify-center">
+    <div className="flex flex-wrap gap-2 text-center justify-start sm:justify-center">
       {skillItens.map((skillItens, index) => (
-        <p key={index} className="font-semibold text-base text-white bg-card p-3 rounded-2xl">
+        <p key={index} className="font-semibold text-xs text-white bg-card p-3 rounded-2xl">
           {skillItens.nameSkill}
         </p>
       ))}

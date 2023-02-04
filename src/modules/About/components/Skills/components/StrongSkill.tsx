@@ -14,9 +14,9 @@ export interface Action {
 
 const StrongSkill = () => {
   return (
-    <div className="flex flex-col gap-3 items-center">
+    <div className="flex flex-col gap-3 items-start sm:items-center">
       <div>
-        <p className="font-bold text-lg text-white">Strong</p>
+        <p className="font-bold text-base text-white">Strong</p>
       </div>
       <div className="flex flex-col">
         <CardSkill skillItens={skillItens} />

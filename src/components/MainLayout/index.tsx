@@ -37,8 +37,8 @@ const MainLayout: React.FC<Props> = ({ children }) => {
         } `}
       >
         <div
-          className={`w-full flex justify-center shadow-lg text-white
-          ${open ? 'bg-default text-white' : 'bg-default shadow-lg'}`}
+          className={`w-full flex shadow-lg text-white
+          ${open ? 'bg-default text-white justify-center' : 'bg-default shadow-lg'}`}
         >
           <div className="xl:max-w-7xl lg:max-w-full sm:max-w-xl max-w-xs min-w-min">
             <div className="flex flex-row md:px-10 px-3 py-2 items-center justify-start sm:justify-center flex-wrap">
@@ -56,7 +56,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
                   </Link>
                 </div>
               </ul>
-              <div className="sm:hidden visible text-right place-content-end">
+              <div className="sm:hidden visible text-right justify-start">
                 <div onClick={toggleOpen}>
                   {open ? (
                     <svg
@@ -110,7 +110,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
           </div>
         </div>
         <div
-          className={`grow justify-center w-full xl:max-w-full lg:max-w-full sm:max-w-full max-w-full py-3 xl:p-12 ${registrationPage} md:px-10 px-4 mt-2 rounded-sm lg:px-7`}
+          className={`grow justify-center w-full xl:max-w-full lg:max-w-full sm:max-w-full max-w-full py-3 xl:p-12 ${registrationPage} mt-2 rounded-sm px-14`}
         >
           {children}
         </div>

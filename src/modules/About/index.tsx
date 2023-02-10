@@ -3,6 +3,7 @@ import AcademicGraduation from './components/AcademicGraduation';
 import Description from './components/Description';
 import Experience from './components/Experience/index';
 import ExtraQualifications from './components/ExtraQualifications';
+import Links from './components/Links';
 import Skills from './components/Skills/index';
 
 const About = () => {
@@ -35,9 +36,9 @@ const About = () => {
       <div className="sm:mt-9 mt-6">
         <ExtraQualifications />
       </div>
-      {/* <div className="sm:mt-9 mt-6">
+      <div className="sm:mt-9 mt-6">
         <Links />
-      </div> */}
+      </div>
     </div>
   );
 };

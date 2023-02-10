@@ -38,12 +38,12 @@ const MainLayout: React.FC<Props> = ({ children }) => {
       >
         <div
           className={`w-full flex shadow-lg text-white
-          ${open ? 'bg-default text-white justify-center' : 'bg-default shadow-lg'}`}
+          ${open ? 'bg-default text-white' : 'bg-default shadow-lg'}`}
         >
-          <div className="xl:max-w-7xl lg:max-w-full sm:max-w-xl max-w-xs min-w-min">
-            <div className="flex flex-row md:px-10 px-3 py-2 items-center justify-start sm:justify-center flex-wrap">
+          <div className="xl:max-w-7xl lg:max-w-full sm:max-w-xl max-w-xs min-w-min ">
+            <div className="flex flex-row sm:px-10 px-3 py-2">
               <ul className="hidden sm:flex px-4">
-                <div className="hidden md:flex place-content-end gap-2">
+                <div className="hidden sm:flex gap-2">
                   <Link to={RoutesURL.SOBRE_MIM} rel="noreferrer">
                     <li className="cursor-pointer hover:text-indigo-300 xl:text-2xl lg:text-xl transition-all font-medium rounded py-1 px-3 ease-in-out">
                       Sobre mim
@@ -56,7 +56,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
                   </Link>
                 </div>
               </ul>
-              <div className="sm:hidden visible text-right justify-start">
+              <div className="sm:hidden visible">
                 <div onClick={toggleOpen}>
                   {open ? (
                     <svg
@@ -74,7 +74,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
                     </svg>
                   ) : (
                     <svg
-                      className={`h-8 w-8 text-white`}
+                      className="h-8 w-8 text-white"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -89,11 +89,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
                 </div>
               </div>
             </div>
-            <ul
-              className={`flex flex-col bg-default text-white gap-2 p-2 text-center ${
-                open ? '' : 'hidden'
-              }`}
-            >
+            <ul className={`flex flex-col bg-default text-white gap-2 p-2 ${open ? '' : 'hidden'}`}>
               <li
                 className="cursor-pointer hover:text-indigo-300 transition-all font-medium rounded p-3 ease-in-out"
                 onClick={() => navigate(RoutesURL.SOBRE_MIM)}

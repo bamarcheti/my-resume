@@ -45,12 +45,12 @@ const MainLayout: React.FC<Props> = ({ children }) => {
               <ul className="hidden sm:flex px-4">
                 <div className="hidden sm:flex gap-2">
                   <Link to={RoutesURL.SOBRE_MIM} rel="noreferrer">
-                    <li className="cursor-pointer hover:text-indigo-300 xl:text-2xl lg:text-xl transition-all font-medium rounded py-1 px-3 ease-in-out">
+                    <li className="cursor-pointer hover:text-indigo-300 xl:text-2xl lg:text-xl transition-all font-medium rounded py-1 px-3 ease-in-out hover:scale-105">
                       Sobre mim
                     </li>
                   </Link>
                   <Link to={RoutesURL.PROJETOS} rel="noreferrer">
-                    <li className="cursor-pointer hover:text-indigo-300 xl:text-2xl lg:text-xl transition-all font-medium rounded py-1 px-3 ease-in-out">
+                    <li className="cursor-pointer hover:text-indigo-300 xl:text-2xl lg:text-xl transition-all font-medium rounded py-1 px-3 ease-in-out hover:scale-105">
                       Projetos
                     </li>
                   </Link>

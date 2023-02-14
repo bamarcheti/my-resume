@@ -16,7 +16,7 @@ const About = () => {
           <p className="font-normal text-base text-primary">Campo Grande, Mato Grosso do Sul</p>
         </div>
         <div>
-          <p className="font-semibold text-2xl xl:text-3xl text-secondary">
+          <p className="font-semibold text-2xl xl:text-3xl text-secondary transition ease-in-out hover:translate-x-4 hover:scale-105">
             Junior Front-end Developer
           </p>
         </div>

@@ -16,7 +16,7 @@ const ExperienceSection: React.FC<Props> = ({ company, period, description }) =>
         </p>
       </div>
       <div className="flex flex-col">
-        <ul className="align-center text-sm xl:text-base lg:text-base font-normal text-white">
+        <ul className="align-center text-sm xl:text-base lg:text-base font-normal text-textA">
           {description}
         </ul>
       </div>

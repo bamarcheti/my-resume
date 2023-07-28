@@ -4,17 +4,19 @@ const Description = () => {
   return (
     <div className="flex flex-col">
       <div className="flex flex-col justify-between items-start">
-        <Subtitle subtitle="Description" />
+        <Subtitle subtitle="Descrição" />
       </div>
       <div className="flex flex-col gap-10 pt-0 lg:pt-2">
-        <p className="font-normal text-white text-base lg:text-lg text-left">
-          I work for a year as a programmer. I started with Vue.js and then with React.js, in the
-          I’m on we use React.js and Tailwind, some of the libs are Headless UI, react-router-dom
-          and others, we also use some tools to format de code like Prettier and ESLint. I already
-          used material ui and also styled-components in another project. In my project we do things
-          like Payslip, Careers and website, I developed the download of the payslip to pdf and if
-          also has the possibility of viewing if without downloading, I made some modals (pop-up),
-          table and it also has responsiveness throughout the project.
+        <p className="font-normal text-textA text-base lg:text-lg text-left">
+          Tenho 21 anos. Sou graduada em Análise e Desenvolvimento de Sistemas (TADS) na Faculdade
+          Insted. Trabalho a um ano e meio com programação. Tenho bastante interesse e paixão por
+          essa área. Eu iniciei com Vue.js e depois com React.js. No momento tenho utilizado
+          React.js, Tailwind, TypeScript e Next.js, algumas libs são Headless UI, react-router-dom e
+          outras. Eu já utilizei material ui e também styled-components em outro projeto. No
+          trabalho desenvolvo projetos como Holerite, Carreiras e site. Todos em foco na
+          usabilidade, utilidade e desejabilidade do usuário e responsividade. Estou sempre
+          estudando e procurando melhorar. Tenho disponibilidade para trabalhar em qualquer modelo
+          de trabalho que a empresa preferir: presencial, híbrido ou remoto.
         </p>
       </div>
     </div>

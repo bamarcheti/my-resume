@@ -10,7 +10,7 @@ const CardSkill = ({ skillItens }: Props) => {
       {skillItens.map((skillItens, index) => (
         <p
           key={index}
-          className="font-semibold text-xs text-white bg-card p-3 rounded-2xl transition ease-in-out hover:scale-105 hover:text-gray-400"
+          className="font-semibold text-xs text-white bg-secondary p-3 rounded-2xl transition ease-in-out hover:scale-105 hover:text-gray-400"
         >
           {skillItens.nameSkill}
         </p>

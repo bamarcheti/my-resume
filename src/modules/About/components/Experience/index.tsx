@@ -5,17 +5,16 @@ const Experience = () => {
   return (
     <div className="flex flex-col">
       <div className="flex flex-col justify-between items-start">
-        <Subtitle subtitle="Experience" />
+        <Subtitle subtitle="Experiência " />
       </div>
       <ExperienceSection
-        company="PSG Tecnologia / Junior Developer"
-        period="SINCE SEPTEMBER 2021, SEDE"
-        description="
-        I work in the internal projects of the company I work for (Payslip, Careers, company website);
-        I use tools like React.js and Tailwind daily on all project fronts;
-        These projects contain: responsiveness for desktop, tablet and mobile; API integration; using react-router-dom; in addition to having clean architecture;
-        I live daily with agile methodologies (we use Scrum, daily and plannings to manage our team);
-        I have a daily and direct relationship with my team (during office hours we are on call making our demands and if necessary we clarify doubts with each other so that we can solve our problem)."
+        company="Inovvati Tecnologia / Desenvolvedora Junior"
+        period="DESDE SETEMBRO DE 2021, SEDE"
+        description="Atuo nos projetos internos da empresa que trabalho (Holerite, Carreiras, Site da empresa);
+        Utilizo ferramentas como React.js, Tailwind, TypeScript e Next.js diariamente em todas as frente do projeto;
+        Estes projetos contém: responsividade para desktop, tablet e mobile; integração com API; utilização do react-router-dom; além de ter arquitetura limpa e código limpo;
+        Convivo diariamente com metodologias ágeis com Kanban e Xp (utilizamos Scrum, daily e plannings para a gestão de nossa equipe);
+        Tenho um relacionamento diário e direto com minha equipe (durante o expediente ficamos em chamada fazendo nossas demandas e caso necessário tiramos dúvidas uns com os outros para que possamos solucionar nosso problema)."
       />
     </div>
   );

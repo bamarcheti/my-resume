@@ -20,7 +20,7 @@ const Links = () => {
               alt="globe"
             />
           </a>
-          <a href="https://discord.com/channels/@ba_marcheti#3824">
+          <a href="https://discord.com/channels/@ba_marcheti">
             <img
               src={discord}
               className="transition ease-in-out hover:-translate-1 hover:scale-110"

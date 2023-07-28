@@ -12,12 +12,12 @@ const About = () => {
       <div className="flex flex-col justify-between">
         <MainTitle title="Bárbara Marcheti Fiorin" />
         <div className="flex flex-col sm:py-3">
-          <p className="font-normal text-base text-primary">Brazilian, single, 20 years old</p>
+          <p className="font-normal text-base text-primary">Brasileira, Solteira, 21 Anos</p>
           <p className="font-normal text-base text-primary">Campo Grande, Mato Grosso do Sul</p>
         </div>
         <div>
           <p className="font-semibold text-2xl xl:text-3xl text-secondary transition ease-in-out hover:translate-x-4 hover:scale-105">
-            Junior Front-end Developer
+            Desenvolvedora Front-end Junior
           </p>
         </div>
       </div>

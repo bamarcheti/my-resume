@@ -7,7 +7,7 @@ type Props = {
 const MainTitle: React.FC<Props> = ({ title }) => {
   return (
     <div className="sm:py-1 py-0">
-      <span className="font-semibold font-sans xl:text-3xl lg:text-2xl text-2xl text-white">
+      <span className="font-semibold font-sans xl:text-3xl lg:text-2xl text-2xl text-textA">
         {title}
       </span>
     </div>

@@ -5,7 +5,7 @@ const Projects = () => {
         <MainTitle title="Projetos" />
       </div> */}
       <div className="flex justify-center items-center pt-32">
-        <p className="font-bold text-2xl text-primary">CARREGANDO...</p>
+        <p className="font-bold text-2xl text-primary">Está página está em desenvolvimento...</p>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const ExtraQualifications = () => {
         <Subtitle subtitle="Qualificações extras" />
       </div>
       <div className="flex flex-col sm:pt-4 pt-0">
-        <div className="flex flex-row gap-5 sm:gap-10 w-full xl:gap-16 lg:gap-14 justify-center">
+        <div className="flex md:flex-row flex-col gap-5 sm:gap-10 w-full xl:gap-16 lg:gap-14 justify-center">
           <div className="flex flex-col gap-4 w-full">
             <Card
               title="SEBRAE"

@@ -1,22 +1,6 @@
 # **✨ Como executar**
 
-**Para que esse projeto funcione corretamente, é preciso estar com o servidor rodando.**
+**Para o correto funcionamento deste projeto, é necessário tê-lo aberto localmente em sua máquina. Execute os seguintes comandos no terminal de sua escolha:**
 
-> ### **Requisitos**
->
-> - [React](https://reactnative.dev/docs/environment-setup)
-> - [Git](https://git-scm.com/downloads)
-> - [Visual Studio Code](https://code.visualstudio.com/)
-
-## **🚀 Rodando**
-
-Entrar na pasta do projeto e executar no terminal:
-
-```sh
-//instalando dependências
-yarn i ou yarn install
-```
-
-```sh
-yarn start
-```
+> - Instale os pacotes com `yarn` ou `yarn install`.
+> - Execute `yarn start` para iniciar o servidor.

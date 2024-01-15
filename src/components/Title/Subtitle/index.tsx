@@ -6,7 +6,7 @@ type Props = {
 
 const Subtitle: React.FC<Props> = ({ subtitle }) => {
   return (
-    <div className="sm:py-1 py-3">
+    <div className="flex items-start sm:py-1 py-3">
       <span className="font-semibold text-xl font-mono text-textB">{subtitle}</span>
     </div>
   );

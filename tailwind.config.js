@@ -4,13 +4,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: '#FFFF',
-        primary: '#674FA3',
+        default: '#2B2B2B',
         secondary: '#A259FF',
-        textA: '#2B2B2B',
-        textB: '#767676'
+        textB: '#767676',
+
+        white: '#FFFF',
+        whitePrimary: '#674FA3',
+
+        dark: '#3B3B3B',
+        darkPrimary: '#858584'
       }
     }
   },
+  darkMode: 'class',
   plugins: []
 };

@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 @layer components {
-  .primary {
-    @apply bg-primary text-white;
+  .whitePrimary {
+    @apply bg-whitePrimary text-white;
   }
 
-  .primary:hover {
-    @apply hover:bg-primary text-white hover:bg-opacity-90;
+  .whitePrimary:hover {
+    @apply hover:bg-whitePrimary text-white hover:bg-opacity-90;
   }
 
   .secondary {
@@ -19,12 +19,44 @@
     @apply bg-secondary text-white hover:bg-opacity-90;
   }
 
-  .textA {
-    @apply text-textA;
+  .default {
+    @apply text-default;
   }
 
-  .textA:hover {
-    @apply text-textA text-opacity-80;
+  .default:hover {
+    @apply text-default text-opacity-80;
+  }
+
+  .textB {
+    @apply text-textB;
+  }
+
+  .textB:hover {
+    @apply text-textB text-opacity-80;
+  }
+
+  .secondary {
+    @apply bg-secondary text-white;
+  }
+
+  .secondary:hover {
+    @apply hover:bg-secondary text-white hover:bg-opacity-90;
+  }
+
+  .darkPrimary {
+    @apply bg-darkPrimary text-white;
+  }
+
+  .darkPrimary:hover {
+    @apply bg-darkPrimary text-white hover:bg-opacity-90;
+  }
+
+  .white {
+    @apply text-white;
+  }
+
+  .white:hover {
+    @apply text-white text-opacity-80;
   }
 
   .textB {

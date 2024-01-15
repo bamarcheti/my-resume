@@ -16,7 +16,7 @@ const StrongSkill = () => {
   return (
     <div className="flex flex-col gap-3 items-start sm:items-center">
       <div>
-        <p className="font-bold text-base text-textA">Forte</p>
+        <p className="font-bold text-base text-default">Forte</p>
       </div>
       <div className="flex flex-col">
         <CardSkill skillItens={skillItens} />

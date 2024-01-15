@@ -7,7 +7,7 @@ const Description = () => {
         <Subtitle subtitle="Descrição" />
       </div>
       <div className="flex flex-col gap-10 pt-0 lg:pt-2">
-        <p className="font-normal text-textA text-base lg:text-lg text-left">
+        <p className="font-normal text-default dark:text-white text-base lg:text-lg text-left">
           Tenho 21 anos. Sou graduada em Análise e Desenvolvimento de Sistemas (TADS) na Faculdade
           Insted. Trabalho a um ano e meio com programação. Tenho bastante interesse e paixão por
           essa área. Eu iniciei com Vue.js e depois com React.js. No momento tenho utilizado

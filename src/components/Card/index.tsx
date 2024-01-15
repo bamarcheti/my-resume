@@ -8,12 +8,12 @@ type Props = {
 
 const Card: React.FC<Props> = ({ title, period, description }) => {
   return (
-    <div className="flex flex-col rounded-3xl bg-secondary xl:pb-8 xl:pt-6 xl:px-12 pb-5 pt-3 px-7 gap-4 transition ease-in-out hover:scale-105">
+    <div className="flex flex-col rounded-3xl bg-secondary dark:bg-dark xl:pb-8 xl:pt-6 xl:px-12 pb-5 pt-3 px-7 gap-4 transition ease-in-out hover:scale-105">
       <div className="flex flex-col gap-1.5">
         <p className="flex justify-center align-center text-base xl:text-lg lg:text-lg font-bold text-white">
           {title}
         </p>
-        <p className="align-center text-xs xl:text-sm lg:text-sm font-normal text-textA">
+        <p className="align-center text-xs xl:text-sm lg:text-sm font-normal text-default dark:text-secondary">
           {period}
         </p>
       </div>

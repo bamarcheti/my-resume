@@ -1,11 +1,14 @@
+import MainTitle from '../../components/Title/MainTitle';
+import AllProjects from './components/AllProjects';
+import HighlightedProjects from './components/HighlightedProjects';
+
 const Projects = () => {
   return (
-    <div className="flex flex-col">
-      {/* <div className="flex flex-wrap justify-between">
-        <MainTitle title="Projetos" />
-      </div> */}
-      <div className="flex justify-center items-center pt-32">
-        <p className="font-bold text-2xl text-primary">Está página está em desenvolvimento...</p>
+    <div className="flex flex-col gap-10">
+      <MainTitle title="Projetos" />
+      <div className="flex flex-col gap-28">
+        <HighlightedProjects />
+        <AllProjects />
       </div>
     </div>
   );

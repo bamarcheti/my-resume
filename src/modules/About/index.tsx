@@ -3,7 +3,6 @@ import Description from './components/Description';
 import Experience from './components/Experience/index';
 import ExtraQualifications from './components/ExtraQualifications';
 import Header from './components/Header';
-import Links from './components/Links';
 import Skills from './components/Skills/index';
 
 const About = () => {
@@ -16,7 +15,6 @@ const About = () => {
         <AcademicGraduation />
         <Experience />
         <ExtraQualifications />
-        <Links />
       </div>
     </div>
   );

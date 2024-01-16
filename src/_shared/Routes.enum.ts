@@ -1,6 +1,6 @@
 enum RoutesURL {
-  SOBRE_MIM = '/',
-  PROJETOS = '/projetos'
+  ABOUT = '/',
+  PROJECTOS = '/projetos'
 }
 
 export default RoutesURL;

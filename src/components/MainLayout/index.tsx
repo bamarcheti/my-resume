@@ -16,7 +16,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
   const { pathname } = useLocation();
 
   const getPathName = () => {
-    if (pathname === RoutesURL.SOBRE_MIM) {
+    if (pathname === RoutesURL.ABOUT) {
       setRegistrationPage(true);
     } else {
       setRegistrationPage(false);
@@ -45,12 +45,12 @@ const MainLayout: React.FC<Props> = ({ children }) => {
       >
         <div className="flex flex-row w-full">
           <ul className="hidden sm:flex gap-4 text-xl font-semibold w-full">
-            <Link to={RoutesURL.SOBRE_MIM}>
+            <Link to={RoutesURL.ABOUT}>
               <li className="cursor-pointer hover:text-indigo-300 transition-all ease-in-out hover:scale-105">
-                Sobre mim
+                Sobre
               </li>
             </Link>
-            <Link to={RoutesURL.PROJETOS}>
+            <Link to={RoutesURL.PROJECTOS}>
               <li className="cursor-pointer hover:text-indigo-300 transition-all ease-in-out hover:scale-105">
                 Projetos
               </li>
@@ -97,13 +97,13 @@ const MainLayout: React.FC<Props> = ({ children }) => {
         >
           <li
             className="cursor-pointer hover:text-indigo-300 transition-all ease-in-out"
-            onClick={() => navigate(RoutesURL.SOBRE_MIM)}
+            onClick={() => navigate(RoutesURL.ABOUT)}
           >
-            Sobre mim
+            Sobre
           </li>
           <li
             className="cursor-pointer hover:text-indigo-300 transition-all ease-in-out"
-            onClick={() => navigate(RoutesURL.PROJETOS)}
+            onClick={() => navigate(RoutesURL.PROJECTOS)}
           >
             Projetos
           </li>

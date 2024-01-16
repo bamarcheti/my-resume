@@ -9,8 +9,8 @@ const AppRoutes: React.FC = () => {
     <HashRouter>
       <MainLayout>
         <Routes>
-          <Route index path={RoutesURL.SOBRE_MIM} element={<About />} />
-          <Route path={RoutesURL.PROJETOS} element={<Projects />} />
+          <Route index path={RoutesURL.ABOUT} element={<About />} />
+          <Route path={RoutesURL.PROJECTOS} element={<Projects />} />
         </Routes>
       </MainLayout>
     </HashRouter>

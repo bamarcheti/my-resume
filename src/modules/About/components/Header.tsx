@@ -8,11 +8,9 @@ const Header = () => {
         <p className="font-normal text-base text-textB">Brasileira, Solteira, 21 Anos</p>
         <p className="font-normal text-base text-textB">Campo Grande, Mato Grosso do Sul</p>
       </div>
-      <div>
-        <p className="font-semibold text-3xl capitalize text-secondary transition ease-in-out hover:translate-x-4 hover:scale-105">
-          Desenvolvedora Front-end Junior
-        </p>
-      </div>
+      <p className="font-semibold text-3xl capitalize text-secondary transition ease-in-out hover:translate-x-4 hover:scale-105">
+        Desenvolvedora Front-end Junior
+      </p>
     </div>
   );
 };

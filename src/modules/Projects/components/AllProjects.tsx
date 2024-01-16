@@ -9,6 +9,7 @@ export interface Repo {
   topics: string[];
   homepage: string | any;
   previewImageUrl: string | null;
+  created_at: string;
 }
 
 const AllProjects = () => {
@@ -18,7 +19,17 @@ const AllProjects = () => {
     try {
       const response = await fetch('https://api.github.com/users/bamarcheti/repos');
       const data = await response.json();
-      setRepos(data);
+
+      const reposWithDate: Repo[] = data.map((repo: any) => ({
+        ...repo,
+        created_at: repo.created_at
+      }));
+
+      const sortedRepos = reposWithDate.sort(
+        (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+      );
+
+      setRepos(sortedRepos);
     } catch (error) {
       console.error('Erro ao buscar repositórios do GitHub', error);
     }
@@ -31,7 +42,7 @@ const AllProjects = () => {
   return (
     <div>
       <Subtitle subtitle="Todos" />
-      <ul className="grid grid-cols-3 gap-4">
+      <ul className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
         {repos.map((repo) => (
           <li key={repo.id}>
             <ProjectCard

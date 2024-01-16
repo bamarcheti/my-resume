@@ -4,7 +4,7 @@ type Props = {
   title: string;
 };
 
-const MainTitle: React.FC<Props> = ({ title }) => {
+const Title: React.FC<Props> = ({ title }) => {
   return (
     <div className="sm:py-1 py-0">
       <span className="font-semibold font-sans text-3xl text-default dark:text-darkPrimary">
@@ -14,4 +14,4 @@ const MainTitle: React.FC<Props> = ({ title }) => {
   );
 };
 
-export default MainTitle;
+export default Title;

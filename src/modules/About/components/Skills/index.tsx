@@ -1,4 +1,4 @@
-import Subtitle from '../../../../components/Title/Subtitle';
+import Subtitle from '../../../../components/Subtitle';
 import AverageSkill from './components/AverageSkill';
 import StrongSkill from './components/StrongSkill';
 import WeakSkill from './components/WeakSkill';

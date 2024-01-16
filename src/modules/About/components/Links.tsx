@@ -1,5 +1,5 @@
 import { Github, Instagram, Linkedin, Mail } from 'lucide-react';
-import Subtitle from '../../../components/Title/Subtitle';
+import Subtitle from '../../../components/Subtitle';
 
 const Links = () => {
   const iconStyle =

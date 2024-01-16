@@ -1,11 +1,11 @@
-import MainTitle from '../../components/Title/MainTitle';
+import Title from '../../components/Title';
 import AllProjects from './components/AllProjects';
 import HighlightedProjects from './components/HighlightedProjects';
 
 const Projects = () => {
   return (
     <div className="flex flex-col gap-10">
-      <MainTitle title="Projetos" />
+      <Title title="Projetos" />
       <div className="flex flex-col gap-28">
         <HighlightedProjects />
         <AllProjects />

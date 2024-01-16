@@ -1,9 +1,9 @@
-import MainTitle from '../../../components/Title/MainTitle';
+import Title from '../../../components/Title';
 
 const Header = () => {
   return (
     <div className="flex flex-col justify-between">
-      <MainTitle title="Bárbara Marcheti Fiorin" />
+      <Title title="Bárbara Marcheti Fiorin" />
       <div className="flex flex-col sm:py-3">
         <p className="font-normal text-base text-textB">Brasileira, Solteira, 21 Anos</p>
         <p className="font-normal text-base text-textB">Campo Grande, Mato Grosso do Sul</p>

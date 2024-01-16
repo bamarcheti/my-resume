@@ -1,4 +1,4 @@
-import Subtitle from '../../../components/Title/Subtitle';
+import Subtitle from '../../../components/Subtitle';
 
 const Description = () => {
   return (

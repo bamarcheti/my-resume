@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import ProjectCard from '../../../components/ProjectCard';
-import Subtitle from '../../../components/Title/Subtitle';
+import Subtitle from '../../../components/Subtitle';
 
 export interface Repo {
   id: number;

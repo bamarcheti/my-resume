@@ -1,5 +1,5 @@
 import ProjectCard from '../../../components/ProjectCard';
-import Subtitle from '../../../components/Title/Subtitle';
+import Subtitle from '../../../components/Subtitle';
 import { highlights } from '../../../constanst/highlights';
 
 const HighlightedProjects = () => {

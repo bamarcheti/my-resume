@@ -1,5 +1,5 @@
 import Card from '../../../components/Card';
-import Subtitle from '../../../components/Title/Subtitle';
+import Subtitle from '../../../components/Subtitle';
 
 const ExtraQualifications = () => {
   return (

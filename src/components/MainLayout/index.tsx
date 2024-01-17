@@ -1,5 +1,6 @@
 import { Moon, SunMedium } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import RoutesURL from '../../_shared/Routes.enum';
 import Footer from './components/Footer';
@@ -14,6 +15,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
   const navigate = useNavigate();
   const [toggledTheme, setToggledTheme] = useState(false);
   const { pathname } = useLocation();
+  const { t, i18n } = useTranslation();
 
   const getPathName = () => {
     if (pathname === RoutesURL.ABOUT) {
@@ -21,6 +23,11 @@ const MainLayout: React.FC<Props> = ({ children }) => {
     } else {
       setRegistrationPage(false);
     }
+  };
+
+  const changeLanguage = (lang: string) => {
+    console.log(`Changing language to ${lang}`);
+    i18n.changeLanguage(lang);
   };
 
   const toggleOpen = () => {
@@ -108,12 +115,17 @@ const MainLayout: React.FC<Props> = ({ children }) => {
             Projetos
           </li>
         </ul>
-        <div className={`${open ? 'hidden' : 'flex justify-end items-end'}`}>
+        <div className={`${open ? 'hidden' : 'flex w-full justify-end items-end gap-3'}`}>
           {toggledTheme ? (
             <SunMedium onClick={toggleTheme} className="cursor-pointer w-7 h-7 hover:opacity-50" />
           ) : (
             <Moon onClick={toggleTheme} className="cursor-pointer w-7 h-7 hover:opacity-50" />
           )}
+          <div className="gap-3">
+            <button onClick={() => changeLanguage('pt')}>PT</button>
+            <button onClick={() => changeLanguage('en')}>EN</button>
+            <button onClick={() => changeLanguage('es')}>ES</button>
+          </div>
         </div>
       </div>
       <div className="grow justify-center w-full md:p-14 p-9 bg-white dark:bg-default">

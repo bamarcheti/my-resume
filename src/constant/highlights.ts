@@ -14,6 +14,22 @@ export const highlights = [
     previewImageUrl: ''
   },
   {
+    name: 'App Pet For You',
+    html_url: 'https://github.com/Raycsm/app-pet-for-you',
+    topics: [
+      'nodejs',
+      'javascript',
+      'npm',
+      'trello',
+      'firebase',
+      'react-native',
+      'vscode',
+      'figma'
+    ],
+    homepage: 'https://github.com/Raycsm/app-pet-for-you',
+    previewImageUrl: ''
+  },
+  {
     name: 'Library Connect',
     html_url: 'https://github.com/bamarcheti/library-connect',
     topics: ['react', 'typescript', 'material ui'],

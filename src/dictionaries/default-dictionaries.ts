@@ -1,9 +1,9 @@
-import { enUS } from './default-language-collections/default-en-US';
-import { esEs } from './default-language-collections/default-es-ES';
-import { ptBR } from './default-language-collections/default-pt-BR';
+import { enUS } from '../locales/en/translation';
+import { esEs } from '../locales/es/translation';
+import { ptBR } from '../locales/pt/translation';
 
 export const defaultDictionary = {
-  'en-US': enUS,
   'pt-BR': ptBR,
+  'en-US': enUS,
   'es-ES': esEs
 };

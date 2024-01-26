@@ -1,18 +1,23 @@
 {
   "private": true,
   "dependencies": {
+    "@hotjar/browser": "^1.0.9",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "editorconfig": "^1.0.1",
     "eslint": "^8.33.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "i18next": "^23.7.16",
+    "i18next": "^23.7.20",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "i18next-http-backend": "^2.4.2",
     "lucide-react": "^0.309.0",
+    "luxon": "^3.4.4",
     "prettier": "2.8.3",
     "react": "^18.2.0",
+    "react-country-flag": "^3.1.0",
     "react-dom": "^18.2.0",
-    "react-i18next": "^14.0.0",
+    "react-i18next": "^14.0.1",
     "react-router-dom": "^6.6.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^3.0.4"
@@ -47,6 +52,7 @@
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
+    "@types/luxon": "^3.4.2",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@typescript-eslint/eslint-plugin": "^5.50.0",

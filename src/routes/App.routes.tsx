@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import RoutesURL from '../_shared/Routes.enum';
+import RoutesURL from '../_shared/enum/Routes.enum';
 import MainLayout from '../components/MainLayout';
 import About from '../modules/About';
 import Projects from '../modules/Projects';

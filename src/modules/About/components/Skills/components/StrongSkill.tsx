@@ -1,25 +1,14 @@
+import { skills } from '../../../../../_shared/constanst/skills';
 import CardSkill from './CardSkill';
 
-const skillItens: Action[] = [
-  { nameSkill: 'HMTL' },
-  { nameSkill: 'CSS' },
-  { nameSkill: 'GIT' },
-  { nameSkill: 'TRABALHO EM EQUIPE' },
-  { nameSkill: 'METODOLOGIAS ÁGEIS' }
-];
-
-export interface Action {
-  nameSkill: string;
-}
-
 const StrongSkill = () => {
+  const strongSkills = skills.filter((skill) => skill.strength === 'strong');
+
   return (
     <div className="flex flex-col gap-3 items-start sm:items-center">
-      <div>
-        <p className="font-bold text-base text-default dark:text-white">Forte</p>
-      </div>
+      <p className="font-bold text-lg text-default dark:text-white">Forte</p>
       <div className="flex flex-col">
-        <CardSkill skillItens={skillItens} />
+        <CardSkill skills={strongSkills} />
       </div>
     </div>
   );

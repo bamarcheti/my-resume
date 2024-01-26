@@ -1,19 +1,14 @@
+import { skills } from '../../../../../_shared/constanst/skills';
 import CardSkill from './CardSkill';
 
-const skillItens: Action[] = [{ nameSkill: 'NODE' }, { nameSkill: 'VUE' }];
-
-export interface Action {
-  nameSkill: string;
-}
-
 const WeakSkill = () => {
+  const weakSkills = skills.filter((skill) => skill.strength === 'weak');
+
   return (
     <div className="flex flex-col gap-3 items-start sm:items-center">
-      <div>
-        <p className="font-bold text-lg text-default dark:text-white">Fraca</p>
-      </div>
+      <p className="font-bold text-lg text-default dark:text-white">Fraca</p>
       <div className="flex flex-col">
-        <CardSkill skillItens={skillItens} />
+        <CardSkill skills={weakSkills} />
       </div>
     </div>
   );

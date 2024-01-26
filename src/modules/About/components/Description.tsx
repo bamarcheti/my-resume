@@ -16,7 +16,7 @@ const Description = () => {
           trabalho desenvolvo projetos como Holerite, Carreiras e site. Todos em foco na
           usabilidade, utilidade e desejabilidade do usuário e responsividade. Estou sempre
           estudando e procurando melhorar. Tenho disponibilidade para trabalhar em qualquer modelo
-          de trabalho que a empresa preferir: presencial, híbrido ou remoto.
+          de trabalho que a empresa ofertar: presencial, híbrido ou remoto.
         </p>
       </div>
     </div>

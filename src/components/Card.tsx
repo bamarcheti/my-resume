@@ -2,8 +2,8 @@ import React from 'react';
 
 type Props = {
   title: string;
-  period?: string;
-  description?: string;
+  period: string;
+  description: string;
 };
 
 const Card: React.FC<Props> = ({ title, period, description }) => {

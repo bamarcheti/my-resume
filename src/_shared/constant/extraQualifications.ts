@@ -6,7 +6,7 @@ export interface ExtraQualificationsAction {
 
 export const extraQualifications: ExtraQualificationsAction[] = [
   {
-    title: 'SEBREA',
+    title: 'SEBRAE',
     period: 'SETEMBRO DE 2023',
     description: 'Startup Day - Modelando e imprimindo o seu primeiro objeto 3D'
   },

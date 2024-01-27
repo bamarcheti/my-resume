@@ -10,7 +10,11 @@ const Experience = () => {
       <div className="flex flex-col justify-between items-start">
         <Subtitle subtitle={t('subtitle_experience')} />
       </div>
-      <ExperienceSection company={t('experiente.company')} period={t('experiente.period')} />
+      <ExperienceSection
+        company={t('experience.company')}
+        period={t('experience.period')}
+        description={t('experience.description', { returnObjects: true })}
+      />
     </div>
   );
 };

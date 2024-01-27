@@ -2,7 +2,7 @@ import { Moon, SunMedium } from 'lucide-react';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
-import RoutesURL from '../../_shared/Routes.enum';
+import RoutesURL from '../../_shared/enum/Routes.enum';
 import Footer from './components/Footer';
 import MultiLanguages from './components/MultiLanguages';
 

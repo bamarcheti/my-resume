@@ -1,4 +1,4 @@
-import { Action } from '../../../../../_shared/constanst/skills';
+import { Action } from '../../../../../_shared/constant/skills';
 
 type Props = {
   skills: Action[];

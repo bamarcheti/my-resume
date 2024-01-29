@@ -30,3 +30,5 @@ export const skills: Action[] = [
   { name: 'Material UI', strength: 'weak' },
   { name: 'React Native', strength: 'weak' }
 ];
+
+export default skills;

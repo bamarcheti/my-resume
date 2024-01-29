@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { skills } from '../../../../../_shared/constant/skills';
+import skills from '../../../../../_shared/constant/skills'; // Importando os skills
 import CardSkill from './CardSkill';
 
 const StrongSkill = () => {

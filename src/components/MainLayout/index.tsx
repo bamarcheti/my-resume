@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 import RoutesURL from '../../_shared/enum/Routes.enum';
 import Footer from './components/Footer';
-import MultiLanguages from './components/MultiLanguages';
 
 interface Props {
   children: React.ReactNode;
@@ -117,7 +116,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
           ) : (
             <Moon onClick={toggleTheme} className="cursor-pointer w-7 h-7 hover:opacity-50" />
           )}
-          <MultiLanguages />
+          {/* <MultiLanguages /> */}
         </div>
       </div>
       <div className="grow justify-center w-full md:p-14 p-9 bg-white dark:bg-default">

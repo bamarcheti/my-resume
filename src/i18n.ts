@@ -45,6 +45,8 @@ i18n.use(initReactI18next).init({
           description: experiencePT
         },
         subtitle_qualifications: 'Qualificações Extras',
+        title_project: 'Projetos',
+        acess: 'Clique aqui para acessar',
         footer: 'Todos os direitos reservados'
       }
     },
@@ -82,6 +84,8 @@ i18n.use(initReactI18next).init({
           description: experienceEN
         },
         subtitle_qualifications: 'Extra Qualifications',
+        title_project: 'Projects',
+        acess: 'Click here to access',
         footer: 'All rights reserved'
       }
     },
@@ -119,6 +123,8 @@ i18n.use(initReactI18next).init({
           description: experienceES
         },
         subtitle_qualifications: 'Calificaciones Extras',
+        title_project: 'Proyectos',
+        acess: 'Haga clic aquí para acceder',
         footer: 'Todos los derechos reservados'
       }
     }

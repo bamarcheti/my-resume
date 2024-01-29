@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 type Props = {
   name: string;
@@ -9,11 +10,14 @@ type Props = {
 };
 
 const ProjectCard: React.FC<Props> = ({ name, html_url, topics, homepage, previewImageUrl }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col rounded-3xl bg-secondary dark:bg-dark p-4 md:p-6 gap-4">
       <h1>
         <a
           href={html_url}
+          title="github"
           target="_blank"
           rel="noopener noreferrer"
           className="flex text-base lg:text-lg font-bold text-white hover:opacity-60"
@@ -33,9 +37,10 @@ const ProjectCard: React.FC<Props> = ({ name, html_url, topics, homepage, previe
       {homepage && (
         <a
           href={homepage}
+          title={homepage}
           className="text-sm md:text-base text-default dark:text-darkPrimary hover:underline"
         >
-          Clique aqui para acessar
+          {t('acess')}
         </a>
       )}
       {/* {previewImageUrl && <img src={previewImageUrl} alt={`Preview do ${name}`} />} */}

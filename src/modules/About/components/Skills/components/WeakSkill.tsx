@@ -1,19 +1,16 @@
+import { useTranslation } from 'react-i18next';
+import { skills } from '../../../../../_shared/constant/skills';
 import CardSkill from './CardSkill';
 
-const skillItens: Action[] = [{ nameSkill: 'NODE' }, { nameSkill: 'VUE' }];
-
-export interface Action {
-  nameSkill: string;
-}
-
 const WeakSkill = () => {
+  const { t } = useTranslation();
+  const weakSkills = skills.filter((skill) => skill.strength === 'weak');
+
   return (
     <div className="flex flex-col gap-3 items-start sm:items-center">
-      <div>
-        <p className="font-bold text-lg text-default dark:text-white">Fraca</p>
-      </div>
+      <p className="font-bold text-lg text-default dark:text-white">{t('weak_skills')}</p>
       <div className="flex flex-col">
-        <CardSkill skillItens={skillItens} />
+        <CardSkill skills={weakSkills} />
       </div>
     </div>
   );

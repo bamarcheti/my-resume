@@ -1,18 +1,18 @@
-import { Action } from './StrongSkill';
+import { Action } from '../../../../../_shared/constant/skills';
 
 type Props = {
-  skillItens: Action[];
+  skills: Action[];
 };
 
-const CardSkill = ({ skillItens }: Props) => {
+const CardSkill = ({ skills }: Props) => {
   return (
     <div className="flex flex-wrap gap-2 text-center justify-start sm:justify-center ">
-      {skillItens.map((skillItens, index) => (
+      {skills.map((skill, index) => (
         <p
           key={index}
           className="font-semibold text-xs text-white bg-secondary p-3 rounded-2xl transition ease-in-out hover:scale-105 hover:text-default"
         >
-          {skillItens.nameSkill}
+          {skill.name}
         </p>
       ))}
     </div>

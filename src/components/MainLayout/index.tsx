@@ -1,7 +1,8 @@
 import { Moon, SunMedium } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import RoutesURL from '../../_shared/Routes.enum';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link, useNavigate } from 'react-router-dom';
+import RoutesURL from '../../_shared/enum/Routes.enum';
 import Footer from './components/Footer';
 
 interface Props {
@@ -10,18 +11,19 @@ interface Props {
 
 const MainLayout: React.FC<Props> = ({ children }) => {
   const [open, setOpen] = useState(false);
-  const [registrationPage, setRegistrationPage] = useState(false);
+  // const [registrationPage, setRegistrationPage] = useState(false);
   const navigate = useNavigate();
   const [toggledTheme, setToggledTheme] = useState(false);
-  const { pathname } = useLocation();
+  // const { pathname } = useLocation();
+  const { t } = useTranslation();
 
-  const getPathName = () => {
-    if (pathname === RoutesURL.ABOUT) {
-      setRegistrationPage(true);
-    } else {
-      setRegistrationPage(false);
-    }
-  };
+  // const getPathName = () => {
+  //   if (pathname === RoutesURL.ABOUT) {
+  //     setRegistrationPage(true);
+  //   } else {
+  //     setRegistrationPage(false);
+  //   }
+  // };
 
   const toggleOpen = () => {
     setOpen((old) => !old);
@@ -33,26 +35,26 @@ const MainLayout: React.FC<Props> = ({ children }) => {
     setToggledTheme(isDarkMode);
   };
 
-  useEffect(() => {
-    getPathName();
-  }, [pathname]);
+  // useEffect(() => {
+  //   getPathName();
+  // }, [pathname]);
 
   return (
     <div className="w-full h-screen bg-whitePrimary dark:bg-dark">
       <div
-        className={`flex text-white p-4
+        className={`flex text-white py-4 px-8
           ${open ? 'flex-col' : 'justify-between items-center'}`}
       >
         <div className="flex flex-row w-full">
           <ul className="hidden sm:flex gap-4 text-xl font-semibold w-full">
             <Link to={RoutesURL.ABOUT}>
               <li className="cursor-pointer hover:text-indigo-300 transition-all ease-in-out hover:scale-105">
-                Sobre
+                {t('nav_about')}
               </li>
             </Link>
             <Link to={RoutesURL.PROJECTOS}>
               <li className="cursor-pointer hover:text-indigo-300 transition-all ease-in-out hover:scale-105">
-                Projetos
+                {t('nav_projects')}
               </li>
             </Link>
           </ul>
@@ -99,21 +101,22 @@ const MainLayout: React.FC<Props> = ({ children }) => {
             className="cursor-pointer hover:text-indigo-300 transition-all ease-in-out"
             onClick={() => navigate(RoutesURL.ABOUT)}
           >
-            Sobre
+            {t('nav_about')}
           </li>
           <li
             className="cursor-pointer hover:text-indigo-300 transition-all ease-in-out"
             onClick={() => navigate(RoutesURL.PROJECTOS)}
           >
-            Projetos
+            {t('nav_projects')}
           </li>
         </ul>
-        <div className={`${open ? 'hidden' : 'flex justify-end items-end'}`}>
+        <div className={`${open ? 'hidden' : 'flex w-full justify-end items-center gap-8'}`}>
           {toggledTheme ? (
             <SunMedium onClick={toggleTheme} className="cursor-pointer w-7 h-7 hover:opacity-50" />
           ) : (
             <Moon onClick={toggleTheme} className="cursor-pointer w-7 h-7 hover:opacity-50" />
           )}
+          {/* <MultiLanguages /> */}
         </div>
       </div>
       <div className="grow justify-center w-full md:p-14 p-9 bg-white dark:bg-default">

@@ -14,6 +14,22 @@ export const highlights = [
     previewImageUrl: ''
   },
   {
+    name: 'App Pet For You',
+    html_url: 'https://github.com/Raycsm/app-pet-for-you',
+    topics: [
+      'nodejs',
+      'javascript',
+      'npm',
+      'trello',
+      'firebase',
+      'react-native',
+      'vscode',
+      'figma'
+    ],
+    homepage: 'https://github.com/Raycsm/app-pet-for-you',
+    previewImageUrl: ''
+  },
+  {
     name: 'Library Connect',
     html_url: 'https://github.com/bamarcheti/library-connect',
     topics: ['react', 'typescript', 'material ui'],
@@ -22,9 +38,9 @@ export const highlights = [
   },
   {
     name: 'Previsão Tempo',
-    html_url: 'https://previsao-tempo-bamarcheti.vercel.app/',
+    html_url: 'https://github.com/bamarcheti/previsao-tempo',
     topics: ['react', 'javascript', 'api', 'axios'],
-    homepage: 'https://github.com/bamarcheti/previsao-tempo',
+    homepage: 'https://previsao-tempo-bamarcheti.vercel.app/',
     previewImageUrl: '../assets/highlight/previsao-tempo.png'
   },
   {

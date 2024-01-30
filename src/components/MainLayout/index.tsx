@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 import RoutesURL from '../../_shared/enum/Routes.enum';
 import Footer from './components/Footer';
+import SelectLanguage from './components/SelectLanguage';
 
 interface Props {
   children: React.ReactNode;
@@ -110,13 +111,15 @@ const MainLayout: React.FC<Props> = ({ children }) => {
             {t('nav_projects')}
           </li>
         </ul>
-        <div className={`${open ? 'hidden' : 'flex w-full justify-end items-center gap-8'}`}>
+        <div
+          className={`${open ? 'hidden' : 'flex w-full justify-end items-center md:gap-8 gap-6'}`}
+        >
           {toggledTheme ? (
             <SunMedium onClick={toggleTheme} className="cursor-pointer w-7 h-7 hover:opacity-50" />
           ) : (
             <Moon onClick={toggleTheme} className="cursor-pointer w-7 h-7 hover:opacity-50" />
           )}
-          {/* <MultiLanguages /> */}
+          <SelectLanguage />
         </div>
       </div>
       <div className="grow justify-center w-full md:p-14 p-9 bg-white dark:bg-default">

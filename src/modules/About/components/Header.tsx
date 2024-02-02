@@ -15,7 +15,7 @@ const Header = () => {
         </div>
         <Links />
       </div>
-      <p className="font-semibold text-3xl capitalize text-secondary transition ease-in-out hover:translate-x-4 hover:scale-105">
+      <p className="cursor-default font-semibold text-3xl capitalize text-secondary transition ease-in-out hover:translate-x-4 hover:scale-105">
         {t('responsibility')}
       </p>
     </div>

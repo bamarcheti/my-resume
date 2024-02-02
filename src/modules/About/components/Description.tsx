@@ -10,7 +10,7 @@ const Description = () => {
         <Subtitle subtitle={t('subtitle_description')} />
       </div>
       <div className="flex flex-col gap-10 pt-0 lg:pt-2">
-        <p className="font-normal text-default dark:text-white text-base lg:text-lg text-left">
+        <p className="font-normal text-default dark:text-white text-base lg:text-lg text-justify">
           {t('description')}
         </p>
       </div>

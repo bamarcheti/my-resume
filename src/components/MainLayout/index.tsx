@@ -64,7 +64,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
             <div onClick={toggleOpen}>
               {open ? (
                 <svg
-                  className="h-8 w-8 text-white"
+                  className="h-8 w-8 text-white cursor-pointer"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -78,7 +78,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
                 </svg>
               ) : (
                 <svg
-                  className="h-8 w-8 text-white"
+                  className="h-8 w-8 text-white cursor-pointer"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"

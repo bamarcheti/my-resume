@@ -1,5 +1,4 @@
 import i18n from 'i18next';
-// import { DateTime } from 'luxon';
 import { initReactI18next } from 'react-i18next';
 import { experienceEN, experienceES, experiencePT } from './_shared/constant/experience';
 import {

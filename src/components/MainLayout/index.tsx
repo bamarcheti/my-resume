@@ -1,5 +1,5 @@
 import { Moon, SunMedium } from 'lucide-react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 import RoutesURL from '../../_shared/enum/Routes.enum';
@@ -12,19 +12,11 @@ interface Props {
 
 const MainLayout: React.FC<Props> = ({ children }) => {
   const [open, setOpen] = useState(false);
-  // const [registrationPage, setRegistrationPage] = useState(false);
   const navigate = useNavigate();
   const [toggledTheme, setToggledTheme] = useState(false);
-  // const { pathname } = useLocation();
   const { t } = useTranslation();
-
-  // const getPathName = () => {
-  //   if (pathname === RoutesURL.ABOUT) {
-  //     setRegistrationPage(true);
-  //   } else {
-  //     setRegistrationPage(false);
-  //   }
-  // };
+  const [isActiveAbout, setIsActiveAbout] = useState(location.pathname === RoutesURL.ABOUT);
+  const [isActiveProject, setIsActiveProject] = useState(location.pathname === RoutesURL.PROJECTOS);
 
   const toggleOpen = () => {
     setOpen((old) => !old);
@@ -36,9 +28,10 @@ const MainLayout: React.FC<Props> = ({ children }) => {
     setToggledTheme(isDarkMode);
   };
 
-  // useEffect(() => {
-  //   getPathName();
-  // }, [pathname]);
+  useEffect(() => {
+    setIsActiveAbout(location.pathname === RoutesURL.ABOUT);
+    setIsActiveProject(location.pathname === RoutesURL.PROJECTOS);
+  }, [location.pathname]);
 
   return (
     <div className="w-full h-screen bg-whitePrimary dark:bg-dark">
@@ -49,12 +42,20 @@ const MainLayout: React.FC<Props> = ({ children }) => {
         <div className="flex flex-row w-full">
           <ul className="hidden sm:flex gap-4 text-xl font-semibold w-full">
             <Link to={RoutesURL.ABOUT}>
-              <li className="cursor-pointer hover:text-indigo-300 transition-all ease-in-out hover:scale-105">
+              <li
+                className={`${
+                  isActiveAbout ? 'text-indigo-400' : 'text-white'
+                } cursor-pointer hover:text-indigo-300 transition-all ease-in-out hover:scale-105`}
+              >
                 {t('nav_about')}
               </li>
             </Link>
             <Link to={RoutesURL.PROJECTOS}>
-              <li className="cursor-pointer hover:text-indigo-300 transition-all ease-in-out hover:scale-105">
+              <li
+                className={`${
+                  isActiveProject ? 'text-indigo-400' : 'text-white'
+                } cursor-pointer hover:text-indigo-300 transition-all ease-in-out hover:scale-105`}
+              >
                 {t('nav_projects')}
               </li>
             </Link>
@@ -99,13 +100,17 @@ const MainLayout: React.FC<Props> = ({ children }) => {
           }`}
         >
           <li
-            className="cursor-pointer hover:text-indigo-300 transition-all ease-in-out"
+            className={`${
+              isActiveAbout ? 'text-indigo-400' : 'text-white'
+            } cursor-pointer hover:text-indigo-300 transition-all ease-in-out`}
             onClick={() => navigate(RoutesURL.ABOUT)}
           >
             {t('nav_about')}
           </li>
           <li
-            className="cursor-pointer hover:text-indigo-300 transition-all ease-in-out"
+            className={`${
+              isActiveProject ? 'text-indigo-400' : 'text-white'
+            } cursor-pointer hover:text-indigo-300 transition-all ease-in-out`}
             onClick={() => navigate(RoutesURL.PROJECTOS)}
           >
             {t('nav_projects')}

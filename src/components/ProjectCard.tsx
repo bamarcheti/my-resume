@@ -1,3 +1,4 @@
+import { ExternalLink } from 'lucide-react';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -38,9 +39,11 @@ const ProjectCard: React.FC<Props> = ({ name, html_url, topics, homepage, previe
         <a
           href={homepage}
           title={homepage}
-          className="text-sm md:text-base text-default dark:text-darkPrimary hover:underline"
+          target="_blank"
+          className="flex gap-2 items-center text-sm md:text-base text-default dark:text-darkPrimary hover:underline"
+          rel="noreferrer"
         >
-          {t('acess')}
+          {t('acess')} <ExternalLink className="w-5 h-5" />
         </a>
       )}
       {/* {previewImageUrl && <img src={previewImageUrl} alt={`Preview do ${name}`} />} */}

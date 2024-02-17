@@ -35,7 +35,7 @@ export const ProjectCard: React.FC<Props> = ({
       <ul className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-3 items-center">
         {topics.map((topic, index) => (
           <li key={index}>
-            <p className="font-medium md:font-semibold xl:text-sm flex justify-center text-xs text-whitePrimary dark:text-white bg-white dark:bg-secondary px-[24px] sm:p-0 rounded-2xl">
+            <p className="cursor-default font-medium md:font-semibold xl:text-sm flex justify-center text-xs text-whitePrimary dark:text-white bg-white dark:bg-secondary px-[24px] sm:p-0 rounded-2xl">
               {topic}
             </p>
           </li>

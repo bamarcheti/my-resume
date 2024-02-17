@@ -37,11 +37,11 @@ export const Navigation: React.FC = () => {
 
   return (
     <div
-      className={`w-full bg-whitePrimary dark:bg-dark flex text-white py-4 px-8 ${
+      className={`w-full bg-whitePrimary dark:bg-dark flex text-white py-4 px-8 fixed top-0 ${
         open ? 'flex-col' : 'justify-between items-center'
       }`}
     >
-      <div className="flex flex-row w-full">
+      <div className="flex flex-row w-full top-2">
         <ul className="hidden sm:flex gap-4 text-xl font-semibold w-full">
           <Link to={RoutesURL.ABOUT}>
             <li

@@ -10,7 +10,7 @@ export const MainLayout: React.FC<Props> = ({ children }) => {
   return (
     <div className="w-full h-screen">
       <Navigation />
-      <div className="grow justify-center w-full md:p-14 p-9 bg-white dark:bg-default">
+      <div className="grow justify-center w-full md:px-14 md:py-[115px] px-9 py-[102px] bg-white dark:bg-default">
         {children}
       </div>
       <div className="bg-white dark:bg-default">

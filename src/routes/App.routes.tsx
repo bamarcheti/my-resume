@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import RoutesURL from '../_shared/enum/Routes.enum';
-import MainLayout from '../components/MainLayout';
+import { MainLayout } from '../components/MainLayout';
 import About from '../modules/About';
 import Projects from '../modules/Projects';
 
@@ -10,7 +10,7 @@ const AppRoutes: React.FC = () => {
       <MainLayout>
         <Routes>
           <Route index path={RoutesURL.ABOUT} element={<About />} />
-          <Route path={RoutesURL.PROJECTOS} element={<Projects />} />
+          <Route path={RoutesURL.PROJECTS} element={<Projects />} />
         </Routes>
       </MainLayout>
     </BrowserRouter>

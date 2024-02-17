@@ -44,17 +44,55 @@ export const highlights = [
     previewImageUrl: '../assets/highlight/previsao-tempo.png'
   },
   {
-    name: 'Pomodoro',
-    html_url: 'https://github.com/bamarcheti/pomodoro-react',
-    topics: ['react', 'typescript', 'tailwind', 'eslint', 'prettier', 'yarn'],
-    homepage: 'https://pomodoro-react-bamarcheti.vercel.app/',
+    name: 'Notas',
+    html_url: 'https://github.com/bamarcheti/nlw-expert-notes',
+    topics: [
+      'react',
+      'javascript',
+      'typescript',
+      'tailwind',
+      'eslint',
+      'prettier',
+      'npm',
+      'postcss',
+      'vite',
+      'radix-ui',
+      'lucide-react',
+      'vercel'
+    ],
+    homepage: 'https://nlw-expert-notes-bamarcheti.vercel.app/',
     previewImageUrl: '../assets/highlight/pomodoro-react.png'
   },
   {
-    name: 'Projetos React',
-    html_url: 'https://github.com/bamarcheti/projetos-react',
-    topics: ['react', 'javascript'],
-    homepage: 'https://bamarcheti.github.io/projetos-react/',
+    name: 'Food Delivery',
+    html_url: 'https://github.com/bamarcheti/nlw-expert-food-delivery',
+    topics: [
+      'react-native',
+      'javascript',
+      'typescript',
+      'babel',
+      'android-studio',
+      'expo',
+      'tailwindcss'
+    ],
+    homepage: 'https://appetize.io/app/mf5zbhoybwqwdx2uvevc3nfhze?device=pixel7&osVersion=13.0',
     previewImageUrl: '../assets/highlight/projetos-react.png'
+  },
+  {
+    name: 'Votação System',
+    html_url: 'https://github.com/bamarcheti/nlw-expert-polls',
+    topics: [
+      'nodejs',
+      'javascript',
+      'typescript',
+      'docker',
+      'docker-compose',
+      'redis',
+      'sqlite',
+      'fastify',
+      'prisma',
+      'hoppscotch'
+    ],
+    previewImageUrl: '../assets/highlight/pomodoro-react.png'
   }
 ];

@@ -10,7 +10,13 @@ type Props = {
   previewImageUrl: string | null;
 };
 
-const ProjectCard: React.FC<Props> = ({ name, html_url, topics, homepage, previewImageUrl }) => {
+export const ProjectCard: React.FC<Props> = ({
+  name,
+  html_url,
+  topics,
+  homepage,
+  previewImageUrl
+}) => {
   const { t } = useTranslation();
 
   return (
@@ -18,7 +24,7 @@ const ProjectCard: React.FC<Props> = ({ name, html_url, topics, homepage, previe
       <h1>
         <a
           href={html_url}
-          title="github"
+          title={html_url}
           target="_blank"
           rel="noopener noreferrer"
           className="flex text-base lg:text-lg font-bold text-white hover:opacity-60"
@@ -50,5 +56,3 @@ const ProjectCard: React.FC<Props> = ({ name, html_url, topics, homepage, previe
     </div>
   );
 };
-
-export default ProjectCard;

@@ -1,8 +1,8 @@
 import { highlights } from '../../../_shared/constant/highlights';
-import ProjectCard from '../../../components/ProjectCard';
-import Subtitle from '../../../components/Subtitle';
+import { ProjectCard } from '../../../components/ProjectCard';
+import { Subtitle } from '../../../components/Subtitle';
 
-const HighlightedProjects = () => {
+export const HighlightedProjects = () => {
   return (
     <div>
       <Subtitle subtitle="Destaques" />
@@ -22,5 +22,3 @@ const HighlightedProjects = () => {
     </div>
   );
 };
-
-export default HighlightedProjects;

@@ -4,12 +4,10 @@ type Props = {
   subtitle: string;
 };
 
-const Subtitle: React.FC<Props> = ({ subtitle }) => {
+export const Subtitle: React.FC<Props> = ({ subtitle }) => {
   return (
     <div className="flex items-start sm:py-1 py-3">
       <span className="font-semibold text-xl font-mono text-textB">{subtitle}</span>
     </div>
   );
 };
-
-export default Subtitle;

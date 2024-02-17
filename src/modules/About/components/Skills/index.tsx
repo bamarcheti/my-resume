@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import Subtitle from '../../../../components/Subtitle';
+import { Subtitle } from '../../../../components/Subtitle';
 import AverageSkill from './components/AverageSkill';
 import StrongSkill from './components/StrongSkill';
 import WeakSkill from './components/WeakSkill';

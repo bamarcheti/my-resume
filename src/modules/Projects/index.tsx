@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import Title from '../../components/Title';
-import AllProjects from './components/AllProjects';
-import HighlightedProjects from './components/HighlightedProjects';
+import { Title } from '../../components/Title';
+import { AllProjects } from './components/AllProjects';
+import { HighlightedProjects } from './components/HighlightedProjects';
 
 const Projects = () => {
   const { t } = useTranslation();

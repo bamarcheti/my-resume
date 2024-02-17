@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import Card from '../../../components/Card';
-import Subtitle from '../../../components/Subtitle';
+import { Subtitle } from '../../../components/Subtitle';
 
 const AcademicGraduation = () => {
   const { t } = useTranslation();

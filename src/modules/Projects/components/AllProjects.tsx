@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import ProjectCard from '../../../components/ProjectCard';
-import Subtitle from '../../../components/Subtitle';
+import { ProjectCard } from '../../../components/ProjectCard';
+import { Subtitle } from '../../../components/Subtitle';
 
 export interface Repo {
   id: number;
@@ -12,7 +12,7 @@ export interface Repo {
   created_at: string;
 }
 
-const AllProjects = () => {
+export const AllProjects = () => {
   const [repos, setRepos] = useState<Repo[]>([]);
 
   const fetchRepos = async () => {
@@ -58,5 +58,3 @@ const AllProjects = () => {
     </div>
   );
 };
-
-export default AllProjects;

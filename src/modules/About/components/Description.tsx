@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import Subtitle from '../../../components/Subtitle';
+import { Subtitle } from '../../../components/Subtitle';
 
 const Description = () => {
   const { t } = useTranslation();

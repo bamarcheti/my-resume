@@ -8,7 +8,7 @@
   }
 
   .whitePrimary:hover {
-    @apply hover:bg-whitePrimary text-white hover:bg-opacity-90;
+    @apply bg-whitePrimary/90 text-white;
   }
 
   .secondary {
@@ -16,7 +16,7 @@
   }
 
   .secondary:hover {
-    @apply bg-secondary text-white hover:bg-opacity-90;
+    @apply bg-secondary/90 text-white;
   }
 
   .default {
@@ -24,7 +24,7 @@
   }
 
   .default:hover {
-    @apply text-default text-opacity-80;
+    @apply text-default/80;
   }
 
   .textB {
@@ -32,7 +32,7 @@
   }
 
   .textB:hover {
-    @apply text-textB text-opacity-80;
+    @apply text-textB/80;
   }
 
   .secondary {
@@ -40,7 +40,7 @@
   }
 
   .secondary:hover {
-    @apply hover:bg-secondary text-white hover:bg-opacity-90;
+    @apply bg-secondary/90 text-white;
   }
 
   .darkPrimary {
@@ -48,7 +48,7 @@
   }
 
   .darkPrimary:hover {
-    @apply bg-darkPrimary text-white hover:bg-opacity-90;
+    @apply bg-darkPrimary/90 text-white;
   }
 
   .white {
@@ -56,7 +56,7 @@
   }
 
   .white:hover {
-    @apply text-white text-opacity-80;
+    @apply text-white/80;
   }
 
   .textB {
@@ -64,7 +64,7 @@
   }
 
   .textB:hover {
-    @apply text-textB text-opacity-80;
+    @apply text-textB/80;
   }
 }
 

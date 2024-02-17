@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { Subtitle } from '../../../../components/Subtitle';
-import ExtraQualificationsCard from './components/ExtraQualificationsCard';
+import { ExtraQualificationsCard } from './components/ExtraQualificationsCard';
 
-const ExtraQualifications = () => {
+export const ExtraQualifications = () => {
   const { t } = useTranslation();
 
   return (
@@ -16,5 +16,3 @@ const ExtraQualifications = () => {
     </div>
   );
 };
-
-export default ExtraQualifications;

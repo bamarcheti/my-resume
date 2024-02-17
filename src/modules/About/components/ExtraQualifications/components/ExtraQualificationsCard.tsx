@@ -5,7 +5,7 @@ type Props = {
   extraQualifications: ExtraQualificationsAction[];
 };
 
-const ExtraQualificationsCard = ({ extraQualifications }: Props) => {
+export const ExtraQualificationsCard = ({ extraQualifications }: Props) => {
   const fontStyle = 'text-xs xl:text-sm lg:text-sm font-normal';
 
   const iconMap: Record<string, JSX.Element> = {
@@ -42,5 +42,3 @@ const ExtraQualificationsCard = ({ extraQualifications }: Props) => {
     </div>
   );
 };
-
-export default ExtraQualificationsCard;

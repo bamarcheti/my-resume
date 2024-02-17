@@ -3,7 +3,7 @@ import { Title } from '../../components/Title';
 import { AllProjects } from './components/AllProjects';
 import { HighlightedProjects } from './components/HighlightedProjects';
 
-const Projects = () => {
+export const Projects = () => {
   const { t } = useTranslation();
 
   return (
@@ -16,5 +16,3 @@ const Projects = () => {
     </div>
   );
 };
-
-export default Projects;

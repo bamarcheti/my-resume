@@ -7,7 +7,7 @@ type Props = {
   description: string;
 };
 
-const Card: React.FC<Props> = ({ title, period, description }) => {
+export const Card: React.FC<Props> = ({ title, period, description }) => {
   const fontStyle = 'text-xs xl:text-sm lg:text-sm font-normal';
 
   return (
@@ -21,5 +21,3 @@ const Card: React.FC<Props> = ({ title, period, description }) => {
     </div>
   );
 };
-
-export default Card;

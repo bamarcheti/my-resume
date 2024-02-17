@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { Subtitle } from '../../../../components/Subtitle';
-import ExperienceSection from './components/ExperienceSection';
+import { ExperienceSection } from './components/ExperienceSection';
 
-const Experience = () => {
+export const Experience = () => {
   const { t } = useTranslation();
 
   return (
@@ -18,5 +18,3 @@ const Experience = () => {
     </div>
   );
 };
-
-export default Experience;

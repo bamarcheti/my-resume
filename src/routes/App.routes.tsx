@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import RoutesURL from '../_shared/enum/Routes.enum';
 import { MainLayout } from '../components/MainLayout';
-import About from '../modules/About';
-import Projects from '../modules/Projects';
+import { About } from '../modules/About';
+import { Projects } from '../modules/Projects';
 
 const AppRoutes: React.FC = () => {
   return (

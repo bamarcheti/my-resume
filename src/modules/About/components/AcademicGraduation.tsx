@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
-import Card from '../../../components/Card';
+import { Card } from '../../../components/Card';
 import { Subtitle } from '../../../components/Subtitle';
 
-const AcademicGraduation = () => {
+export const AcademicGraduation = () => {
   const { t } = useTranslation();
 
   return (
@@ -22,5 +22,3 @@ const AcademicGraduation = () => {
     </div>
   );
 };
-
-export default AcademicGraduation;

@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { Subtitle } from '../../../../components/Subtitle';
-import AverageSkill from './components/AverageSkill';
-import StrongSkill from './components/StrongSkill';
-import WeakSkill from './components/WeakSkill';
+import { AverageSkill } from './components/AverageSkill';
+import { StrongSkill } from './components/StrongSkill';
+import { WeakSkill } from './components/WeakSkill';
 
-const Skills = () => {
+export const Skills = () => {
   const { t } = useTranslation();
   return (
     <div className="flex flex-col">
@@ -19,5 +19,3 @@ const Skills = () => {
     </div>
   );
 };
-
-export default Skills;

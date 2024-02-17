@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import CardSkill from './CardSkill';
+import { CardSkill } from './CardSkill';
 
-const AverageSkill = () => {
+export const AverageSkill = () => {
   const { t } = useTranslation();
 
   return (
@@ -13,5 +13,3 @@ const AverageSkill = () => {
     </div>
   );
 };
-
-export default AverageSkill;

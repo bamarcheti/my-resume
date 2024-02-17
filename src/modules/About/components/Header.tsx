@@ -1,8 +1,8 @@
-import { useTranslation, withTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { Title } from '../../../components/Title';
 import { Links } from './Links';
 
-const Header = () => {
+export const Header = () => {
   const { t } = useTranslation();
 
   return (
@@ -21,5 +21,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default withTranslation()(Header);

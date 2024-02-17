@@ -4,7 +4,7 @@ type Props = {
   skills: Action[];
 };
 
-const CardSkill = ({ skills }: Props) => {
+export const CardSkill = ({ skills }: Props) => {
   return (
     <div className="flex flex-wrap gap-2 text-center justify-start sm:justify-center ">
       {skills.map((skill, index) => (
@@ -18,5 +18,3 @@ const CardSkill = ({ skills }: Props) => {
     </div>
   );
 };
-
-export default CardSkill;

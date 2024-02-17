@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Subtitle } from '../../../components/Subtitle';
 
-const Description = () => {
+export const Description = () => {
   const { t } = useTranslation();
 
   return (
@@ -17,5 +17,3 @@ const Description = () => {
     </div>
   );
 };
-
-export default Description;

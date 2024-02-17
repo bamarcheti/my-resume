@@ -6,7 +6,7 @@ type Props = {
   description: string[];
 };
 
-const ExperienceSection: React.FC<Props> = ({ company, period, description }) => {
+export const ExperienceSection: React.FC<Props> = ({ company, period, description }) => {
   return (
     <div className="flex flex-col gap-3 sm:gap-4">
       <div className="flex flex-col gap-2 pt-0 lg:pt-2">
@@ -23,5 +23,3 @@ const ExperienceSection: React.FC<Props> = ({ company, period, description }) =>
     </div>
   );
 };
-
-export default ExperienceSection;

@@ -1,6 +1,6 @@
 import { experiencePT } from '../../_shared/constant/experience';
 import { extraQualificationsPT } from '../../_shared/constant/extraQualifications';
-import skillsPT from '../../_shared/constant/skills';
+import { skillsPT } from '../../_shared/constant/skills';
 
 export const ptBR = {
   translation: {

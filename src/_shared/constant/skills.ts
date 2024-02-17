@@ -4,7 +4,7 @@ export interface Action {
 }
 
 export const skillsPT: Action[] = [
-  { name: 'HMTL', strength: 'strong' },
+  { name: 'HTML', strength: 'strong' },
   { name: 'CSS', strength: 'strong' },
   { name: 'Git', strength: 'strong' },
   { name: 'GitHub', strength: 'strong' },
@@ -31,10 +31,8 @@ export const skillsPT: Action[] = [
   { name: 'React Native', strength: 'weak' }
 ];
 
-export default skillsPT;
-
 export const skillsEN: Action[] = [
-  { name: 'HMTL', strength: 'strong' },
+  { name: 'HTML', strength: 'strong' },
   { name: 'CSS', strength: 'strong' },
   { name: 'Git', strength: 'strong' },
   { name: 'GitHub', strength: 'strong' },
@@ -62,7 +60,7 @@ export const skillsEN: Action[] = [
 ];
 
 export const skillsES: Action[] = [
-  { name: 'HMTL', strength: 'strong' },
+  { name: 'HTML', strength: 'strong' },
   { name: 'CSS', strength: 'strong' },
   { name: 'Git', strength: 'strong' },
   { name: 'GitHub', strength: 'strong' },

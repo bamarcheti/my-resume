@@ -20,7 +20,7 @@ export const ProjectCard: React.FC<Props> = ({
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col rounded-3xl bg-secondary dark:bg-dark p-4 md:p-6 gap-4">
+    <div className="flex flex-col rounded-3xl bg-secondary dark:bg-dark p-4 md:p-6 gap-4 h-full">
       <h1>
         <a
           href={html_url}

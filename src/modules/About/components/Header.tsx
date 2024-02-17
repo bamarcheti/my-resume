@@ -1,6 +1,6 @@
 import { useTranslation, withTranslation } from 'react-i18next';
-import Title from '../../../components/Title';
-import Links from './Links';
+import { Title } from '../../../components/Title';
+import { Links } from './Links';
 
 const Header = () => {
   const { t } = useTranslation();
@@ -15,7 +15,7 @@ const Header = () => {
         </div>
         <Links />
       </div>
-      <p className="cursor-default font-semibold text-3xl capitalize text-secondary transition ease-in-out hover:translate-x-4 hover:scale-105">
+      <p className="cursor-default font-semibold text-3xl capitalize text-secondary transition ease-in-out hover:translate-x-1 hover:-translate-y-1">
         {t('responsibility')}
       </p>
     </div>

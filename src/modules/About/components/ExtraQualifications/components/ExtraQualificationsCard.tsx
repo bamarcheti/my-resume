@@ -15,9 +15,9 @@ const ExtraQualificationsCard = ({ extraQualifications }: Props) => {
   };
 
   const styleMap = {
-    course: 'bg-secondary dark:bg-dark',
-    article: 'bg-whiteSecondary dark:bg-darkTertiary',
-    startup: 'bg-tertiary dark:bg-darkSecondary'
+    course: 'bg-secondary dark:bg-dark text-darkSecondary',
+    article: 'bg-whiteSecondary dark:bg-darkTertiary text-darkSecondary',
+    startup: 'bg-tertiary dark:bg-darkSecondary text-darkPrimary'
   };
 
   return (
@@ -34,9 +34,7 @@ const ExtraQualificationsCard = ({ extraQualifications }: Props) => {
             <p className="text-base xl:text-lg lg:text-lg font-bold text-white">
               {extraQualification.title}
             </p>
-            <p className={`${fontStyle} text-darkSecondary dark:text-secondary`}>
-              {extraQualification.period}
-            </p>
+            <p className={`${fontStyle} dark:text-secondary`}>{extraQualification.period}</p>
           </div>
           <p className={`${fontStyle} text-white`}>{extraQualification.description}</p>
         </div>

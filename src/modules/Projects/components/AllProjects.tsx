@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ProjectCard } from '../../../components/ProjectCard';
 import { Subtitle } from '../../../components/Subtitle';
+import { useTranslation } from 'react-i18next';
 
 export interface Repo {
   id: number;
@@ -14,6 +15,7 @@ export interface Repo {
 
 export const AllProjects = () => {
   const [repos, setRepos] = useState<Repo[]>([]);
+  const { t } = useTranslation();
 
   const fetchRepos = async () => {
     try {
@@ -41,7 +43,7 @@ export const AllProjects = () => {
 
   return (
     <div>
-      <Subtitle subtitle="Todos" />
+      <Subtitle subtitle={t('all')} />
       <ul className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
         {repos.map((repo) => (
           <li key={repo.id}>

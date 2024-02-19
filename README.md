@@ -30,6 +30,14 @@ Projeto construído com o objetivo de desenvolver um currículo online de forma 
 
 - **_[README-install](./README-install.md)_**
 
+## **💄 Layout**
+
+Para você poder visualizar o layout do projeto é necessário acessar o link abaixo:
+
+- [Layout](https://www.figma.com/file/Wkx8qVGT4hWuw8P01fLDoe/Resume?type=design&t=lLTh8SuLCLkNoBvU-6)
+
+Lembrando que você precisa ter uma conta no [Figma](http://figma.com/).
+
 ## **💛 Contato**
 
 [<img src='https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About&logoColor=white' alt='Website' height='30'>](https://my-resume-bamarcheti.vercel.app/)

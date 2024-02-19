@@ -34,7 +34,7 @@ Projeto construído com o objetivo de desenvolver um currículo online de forma 
 
 Para você poder visualizar o layout do projeto é necessário acessar o link abaixo:
 
-- [Layout](https://www.figma.com/file/Wkx8qVGT4hWuw8P01fLDoe/Resume?type=design&t=lLTh8SuLCLkNoBvU-6)
+- [Layout](https://www.figma.com/community/file/1341391210977280624)
 
 Lembrando que você precisa ter uma conta no [Figma](http://figma.com/).
 

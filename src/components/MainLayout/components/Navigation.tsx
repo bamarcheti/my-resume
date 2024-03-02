@@ -2,6 +2,7 @@ import { Moon, SunMedium } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+
 import RoutesURL from '../../../_shared/enum/Routes.enum';
 import { ResponsiveMenu } from './ResponsiveMenu';
 import SelectLanguage from './SelectLanguage';
@@ -37,7 +38,7 @@ export const Navigation: React.FC = () => {
 
   return (
     <div
-      className={`w-full bg-whitePrimary dark:bg-dark flex text-white py-4 px-8 fixed top-0 ${
+      className={`w-full bg-whitePrimary dark:bg-dark flex text-white py-4 px-8 fixed top-0 z-20 ${
         open ? 'flex-col' : 'justify-between items-center'
       }`}
     >

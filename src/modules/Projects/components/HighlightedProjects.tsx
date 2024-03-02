@@ -51,7 +51,7 @@ export const HighlightedProjects = () => {
   };
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-3">
       <Subtitle subtitle={t('highlight')} />
       <div className="flex justify-end items-center">
         <ChevronLeft

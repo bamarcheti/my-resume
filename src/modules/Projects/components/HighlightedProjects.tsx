@@ -67,14 +67,16 @@ export const HighlightedProjects = () => {
       <div className="w-full">
         <Slider ref={sliderRef} {...settings}>
           {highlights.map((highlight, index) => (
-            <ProjectCard
-              key={index}
-              name={highlight.name}
-              html_url={highlight.html_url}
-              topics={highlight.topics}
-              homepage={highlight.homepage}
-              previewImageUrl={highlight.previewImageUrl}
-            />
+            <div key={index} className="px-2">
+              <ProjectCard
+                key={index}
+                name={highlight.name}
+                html_url={highlight.html_url}
+                topics={highlight.topics}
+                homepage={highlight.homepage}
+                previewImageUrl={highlight.previewImageUrl}
+              />
+            </div>
           ))}
         </Slider>
       </div>

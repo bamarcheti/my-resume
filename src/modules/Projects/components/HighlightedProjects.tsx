@@ -1,4 +1,7 @@
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import Slider from 'react-slick';
 import { highlights } from '../../../_shared/constant/highlights';
 import { ProjectCard } from '../../../components/ProjectCard';
 import { Subtitle } from '../../../components/Subtitle';
@@ -6,22 +9,73 @@ import { Subtitle } from '../../../components/Subtitle';
 export const HighlightedProjects = () => {
   const { t } = useTranslation();
 
+  const sliderRef = useRef<Slider>(null);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 1500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5500,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  };
+
+  const nextSlide = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
+  };
+
+  const prevSlide = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
+  };
+
   return (
-    <div>
+    <div className="flex flex-col gap-5">
       <Subtitle subtitle={t('highlight')} />
-      <ul className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-        {highlights.map((repo, index) => (
-          <li key={index}>
+      <div className="flex justify-end items-center">
+        <ChevronLeft
+          className="cursor-pointer text-textB hover:text-opacity-60 w-8 h-8"
+          onClick={prevSlide}
+        />
+        <ChevronRight
+          className="cursor-pointer text-textB hover:text-opacity-60 w-8 h-8"
+          onClick={nextSlide}
+        />
+      </div>
+
+      <div className="w-full">
+        <Slider ref={sliderRef} {...settings} className="mx-8">
+          {highlights.map((highlight, index) => (
             <ProjectCard
-              name={repo.name}
-              html_url={repo.html_url}
-              topics={repo.topics}
-              homepage={repo.homepage}
-              previewImageUrl={repo.previewImageUrl}
+              key={index}
+              name={highlight.name}
+              html_url={highlight.html_url}
+              topics={highlight.topics}
+              homepage={highlight.homepage}
+              previewImageUrl={highlight.previewImageUrl}
             />
-          </li>
-        ))}
-      </ul>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };

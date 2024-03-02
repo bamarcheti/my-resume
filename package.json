@@ -5,6 +5,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
+    "@types/react-slick": "^0.23.13",
     "editorconfig": "^1.0.1",
     "eslint": "^8.33.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -16,7 +17,9 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^14.0.1",
     "react-router-dom": "^6.6.2",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",

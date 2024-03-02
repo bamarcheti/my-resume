@@ -37,6 +37,7 @@ export const ptBR = {
     highlight: 'Destaques',
     all: 'Todos',
     acess: 'Clique aqui para acessar',
+    github: 'Acesse o repositório',
     footer: 'Todos os direitos reservados'
   }
 };

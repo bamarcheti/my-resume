@@ -36,6 +36,7 @@ export const enUS = {
     highlight: 'Highlights',
     all: 'All',
     acess: 'Click here to access',
+    github: 'Acess the repository',
     footer: 'All rights reserved'
   }
 };

@@ -37,6 +37,7 @@ export const esEs = {
     highlight: 'Reflejos',
     all: 'Todos',
     acess: 'Haga clic aquí para acceder',
+    github: 'Acceder o repositório',
     footer: 'Todos los derechos reservados'
   }
 };

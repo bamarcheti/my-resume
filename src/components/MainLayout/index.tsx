@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Footer from './components/Footer';
 import { Navigation } from './components/Navigation';
 
@@ -13,9 +14,7 @@ export const MainLayout: React.FC<Props> = ({ children }) => {
       <div className="grow justify-center w-full md:px-14 md:py-[115px] px-9 py-[102px] bg-white dark:bg-default">
         {children}
       </div>
-      <div className="bg-white dark:bg-default">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };

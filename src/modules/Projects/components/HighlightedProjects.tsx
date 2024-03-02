@@ -2,6 +2,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
+
 import { highlights } from '../../../_shared/constant/highlights';
 import { ProjectCard } from '../../../components/ProjectCard';
 import { Subtitle } from '../../../components/Subtitle';

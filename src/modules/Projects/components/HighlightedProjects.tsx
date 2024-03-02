@@ -24,13 +24,15 @@ export const HighlightedProjects = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2
+          slidesToShow: 2,
+          slidesToScroll: 2
         }
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       }
     ]
@@ -62,17 +64,18 @@ export const HighlightedProjects = () => {
         />
       </div>
 
-      <div className="w-full">
-        <Slider ref={sliderRef} {...settings} className="mx-8">
+      <div className="w-full px-8">
+        <Slider ref={sliderRef} {...settings}>
           {highlights.map((highlight, index) => (
-            <ProjectCard
-              key={index}
-              name={highlight.name}
-              html_url={highlight.html_url}
-              topics={highlight.topics}
-              homepage={highlight.homepage}
-              previewImageUrl={highlight.previewImageUrl}
-            />
+            <div key={index} className="mx-2">
+              <ProjectCard
+                name={highlight.name}
+                html_url={highlight.html_url}
+                topics={highlight.topics}
+                homepage={highlight.homepage}
+                previewImageUrl={highlight.previewImageUrl}
+              />
+            </div>
           ))}
         </Slider>
       </div>

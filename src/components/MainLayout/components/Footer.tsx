@@ -11,7 +11,7 @@ const Footer = () => {
     'text-white md:w-6 md:h-6 w-5 h-5 transition ease-in-out hover:opacity-80 hover:-translate-1 hover:scale-110';
 
   return (
-    <div className="flex flex-col bg-whitePrimary dark:bg-dark w-full py-3 px-9 gap-3">
+    <div className="flex flex-col bg-whitePrimary dark:bg-dark w-full py-3 md:px-9 px-5 gap-3">
       <div className="flex">
         <ul className="flex gap-4 md:text-lg font-medium w-full">
           <Link to={RoutesURL.ABOUT}>

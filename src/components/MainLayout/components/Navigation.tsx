@@ -38,7 +38,7 @@ export const Navigation: React.FC = () => {
 
   return (
     <div
-      className={`w-full bg-whitePrimary dark:bg-dark flex text-white py-4 px-8 fixed top-0 z-20 ${
+      className={`w-full bg-whitePrimary dark:bg-dark flex text-white py-4 md:px-9 px-5 fixed top-0 z-20 ${
         open ? 'flex-col' : 'justify-between items-center'
       }`}
     >

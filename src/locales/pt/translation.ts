@@ -24,7 +24,6 @@ export const ptBR = {
       period: 'JULHO DE 2023',
       description: 'Tecnologia em Análise e Desenvolvimento de Sistemas (TADS)'
     },
-
     subtitle_experience: 'Experiência',
     experience: {
       company: 'Inovvati Tecnologia / Desenvolvedora Junior',

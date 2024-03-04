@@ -12,7 +12,7 @@ export const SelectTag = ({ key, onClick, isActive, category }: Props) => {
     <button
       key={key}
       onClick={onClick}
-      className={`px-6 py-2 rounded-full uppercase font-semibold ${
+      className={`px-2 md:px-6 py-2 rounded-full uppercase font-semibold text-sm md:text-base ${
         isActive ? 'bg-textB text-white' : 'bg-transparent text-textB'
       }`}
     >

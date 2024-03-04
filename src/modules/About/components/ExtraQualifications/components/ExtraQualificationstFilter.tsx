@@ -45,7 +45,7 @@ export const ExtraQualificationstFilter = () => {
 
   return (
     <div className="flex flex-col w-full justify-center space-y-5">
-      <div className="flex space-x-1">
+      <div className="flex justify-center md:justify-start">
         {categories.map((cat) => {
           const isActive = selectedCategory === cat;
 
@@ -75,6 +75,11 @@ export const ExtraQualificationstFilter = () => {
             </div>
             <p className={`${fontStyle} text-white`}>{tech.description}</p>
           </div>
+
+          // <ExtraQualificationsCard
+          //   key={index}
+          //   extraQualifications={t('extraQualifications', { returnObjects: true })}
+          // />
         ))}
       </div>
     </div>

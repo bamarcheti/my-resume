@@ -1,6 +1,8 @@
 import { ExtraQualificationsAction } from '../constant/extraQualifications';
 
-export const getCategories = (extraQualifications: ExtraQualificationsAction[]): string[] => {
+export const getQualificationsCategories = (
+  extraQualifications: ExtraQualificationsAction[]
+): string[] => {
   const categories: string[] = [];
   for (const topics of extraQualifications) {
     const hasTopics = categories.find((existingTopics) => existingTopics === topics.type);

@@ -1,6 +1,6 @@
 import { ExtraQualificationsAction } from '../constant/extraQualifications';
 
-export const getFilteredTechs = (
+export const getQualificationsFilteredTechs = (
   selectedCategory: string,
   existingQualifications: ExtraQualificationsAction[]
 ): ExtraQualificationsAction[] => {

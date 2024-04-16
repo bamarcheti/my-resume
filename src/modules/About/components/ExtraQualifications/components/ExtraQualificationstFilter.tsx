@@ -5,8 +5,8 @@ import {
   ExtraQualificationsAction,
   extraQualificationsPT
 } from '../../../../../_shared/constant/extraQualifications';
-import { getCategories } from '../../../../../_shared/helpers/getCategories';
-import { getFilteredTechs } from '../../../../../_shared/helpers/getFilteredTechs';
+import { getQualificationsCategories } from '../../../../../_shared/helpers/getQualificationsCategories';
+import { getQualificationsFilteredTechs } from '../../../../../_shared/helpers/getQualificationsFilteredTechs';
 import { SelectTag } from '../../../../../components/SelectTag';
 
 export const useExtraQualifications = (): ExtraQualificationsAction[] => {
@@ -15,7 +15,7 @@ export const useExtraQualifications = (): ExtraQualificationsAction[] => {
 
 export const ExtraQualificationstFilter = () => {
   const extraQualifications = useExtraQualifications();
-  const categories = getCategories(extraQualifications);
+  const categories = getQualificationsCategories(extraQualifications);
   const [selectedCategory, setSelectedCategory] = useState('');
   const { t } = useTranslation();
 
@@ -41,7 +41,7 @@ export const ExtraQualificationstFilter = () => {
     setSelectedCategory(category);
   };
 
-  const filteredTechs = getFilteredTechs(selectedCategory, extraQualifications);
+  const filteredTechs = getQualificationsFilteredTechs(selectedCategory, extraQualifications);
 
   return (
     <div className="flex flex-col w-full justify-center space-y-5">

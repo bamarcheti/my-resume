@@ -1,26 +1,38 @@
 import { Github, Instagram, Linkedin, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import RoutesURL from '../../../_shared/enum/Routes.enum';
 
 const Footer = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+
+  const isActiveAbout = location.pathname === RoutesURL.ABOUT;
+  const isActiveProject = location.pathname === RoutesURL.PROJECTS;
 
   const iconStyle =
     'text-white md:w-6 md:h-6 w-5 h-5 transition ease-in-out hover:opacity-80 hover:-translate-1 hover:scale-110';
 
   return (
-    <div className="flex flex-col bg-whitePrimary dark:bg-dark w-full py-3 md:px-9 px-5 gap-3">
+    <div className="flex flex-col bg-purple-600 dark:bg-stone-800 w-full py-3 md:px-9 px-5 gap-3">
       <div className="flex">
         <ul className="flex gap-4 md:text-lg font-medium w-full">
           <Link to={RoutesURL.ABOUT}>
-            <li className="text-white cursor-pointer hover:text-indigo-400 transition-all ease-in-out hover:scale-105">
+            <li
+              className={`${
+                isActiveAbout ? 'opacity-50 dark:text-purple-500' : ''
+              } text-white cursor-pointer hover:opacity-60 transition-all ease-in-out hover:scale-105`}
+            >
               {t('nav_about')}
             </li>
           </Link>
           <Link to={RoutesURL.PROJECTS}>
-            <li className="text-white cursor-pointer hover:text-indigo-400 transition-all ease-in-out hover:scale-105">
+            <li
+              className={`${
+                isActiveProject ? 'opacity-50 dark:text-purple-500' : ''
+              } text-white cursor-pointer hover:opacity-60 transition-all ease-in-out hover:scale-105`}
+            >
               {t('nav_projects')}
             </li>
           </Link>

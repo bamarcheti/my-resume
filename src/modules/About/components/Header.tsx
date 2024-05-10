@@ -11,12 +11,12 @@ export const Header = () => {
       <Title title="Bárbara Marcheti Fiorin" />
       <div className="flex flex-col">
         <div className="flex justify-between md:justify-start gap-5">
-          <p className="font-normal text-base text-textB">{t('info')}</p>
+          <p className="font-normal text-base text-stone-500">{t('info')}</p>
           <Links />
         </div>
-        <p className="font-normal text-base text-textB">Campo Grande, Mato Grosso do Sul</p>
+        <p className="font-normal text-base text-stone-500">Campo Grande, Mato Grosso do Sul</p>
       </div>
-      <p className="cursor-default z-10 font-semibold text-3xl capitalize text-secondary transition ease-in-out hover:translate-x-1 hover:-translate-y-1">
+      <p className="cursor-stone-900 z-10 font-semibold text-3xl capitalize text-purple-400 transition ease-in-out hover:translate-x-1 hover:-translate-y-1">
         {t('responsibility')}
       </p>
     </div>

@@ -56,11 +56,11 @@ export const HighlightedProjects = () => {
       <Subtitle subtitle={t('highlight')} />
       <div className="flex justify-end items-center">
         <ChevronLeft
-          className="cursor-pointer text-textB hover:text-opacity-60 w-8 h-8"
+          className="cursor-pointer text-stone-500 hover:text-opacity-60 w-8 h-8"
           onClick={prevSlide}
         />
         <ChevronRight
-          className="cursor-pointer text-textB hover:text-opacity-60 w-8 h-8"
+          className="cursor-pointer text-stone-500 hover:text-opacity-60 w-8 h-8"
           onClick={nextSlide}
         />
       </div>

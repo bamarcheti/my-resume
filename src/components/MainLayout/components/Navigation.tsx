@@ -38,7 +38,7 @@ export const Navigation: React.FC = () => {
 
   return (
     <div
-      className={`w-full bg-whitePrimary dark:bg-dark flex text-white py-4 md:px-9 px-5 fixed top-0 z-20 ${
+      className={`w-full bg-purple-600 dark:bg-stone-800 flex text-white py-4 md:px-9 px-5 fixed top-0 z-20 ${
         open ? 'flex-col' : 'justify-between items-center'
       }`}
     >
@@ -47,8 +47,8 @@ export const Navigation: React.FC = () => {
           <Link to={RoutesURL.ABOUT}>
             <li
               className={`${
-                isActiveAbout ? 'text-indigo-400' : 'text-white'
-              } cursor-pointer hover:text-indigo-400 transition-all ease-in-out hover:scale-105`}
+                isActiveAbout ? 'opacity-50 dark:text-purple-500' : ''
+              } text-white cursor-pointer hover:opacity-60 transition-all ease-in-out hover:scale-105`}
             >
               {t('nav_about')}
             </li>
@@ -56,8 +56,8 @@ export const Navigation: React.FC = () => {
           <Link to={RoutesURL.PROJECTS}>
             <li
               className={`${
-                isActiveProject ? 'text-indigo-400' : 'text-white'
-              } cursor-pointer hover:text-indigo-400 transition-all ease-in-out hover:scale-105`}
+                isActiveProject ? 'opacity-50 dark:text-purple-500' : ''
+              } text-white cursor-pointer hover:opacity-60 transition-all ease-in-out hover:scale-105`}
             >
               {t('nav_projects')}
             </li>

@@ -28,9 +28,9 @@ export const ExtraQualificationstFilter = () => {
   };
 
   const styleMap = {
-    course: 'bg-secondary dark:bg-dark text-darkSecondary',
-    article: 'bg-whiteSecondary dark:bg-darkTertiary text-darkSecondary',
-    startup: 'bg-tertiary dark:bg-darkSecondary text-darkPrimary'
+    course: 'bg-purple-400 dark:bg-stone-800 text-stone-700',
+    article: 'bg-purple-500 dark:bg-stone-600 text-stone-700',
+    startup: 'bg-purple-700 dark:bg-stone-700 text-stone-400'
   };
 
   const handleSelectCategory = (category: string) => {
@@ -71,7 +71,7 @@ export const ExtraQualificationstFilter = () => {
             <div className="flex flex-col gap-1.5 justify-center text-center">
               {iconMap[tech.type]}
               <p className="text-base xl:text-lg lg:text-lg font-bold text-white">{tech.title}</p>
-              <p className={`${fontStyle} dark:text-secondary`}>{tech.period}</p>
+              <p className={`${fontStyle} dark:text-purple-400`}>{tech.period}</p>
             </div>
             <p className={`${fontStyle} text-white`}>{tech.description}</p>
           </div>

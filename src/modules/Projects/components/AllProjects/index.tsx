@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { ProjectCard } from '../../../components/ProjectCard';
-import { Subtitle } from '../../../components/Subtitle';
 import { useTranslation } from 'react-i18next';
+import { Subtitle } from '../../../../components/Subtitle';
+import { AllProjectsCard } from './components/AllProjectsCard';
 
 export interface Repo {
   id: number;
@@ -42,12 +42,12 @@ export const AllProjects = () => {
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-col gap-3">
       <Subtitle subtitle={t('all')} />
       <ul className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
         {repos.map((repo) => (
           <li key={repo.id}>
-            <ProjectCard
+            <AllProjectsCard
               name={repo.name}
               html_url={repo.html_url}
               topics={repo.topics}

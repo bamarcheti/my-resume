@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Title } from '../../components/Title';
 import { AllProjects } from './components/AllProjects';
-import { HighlightedProjects } from './components/HighlightedProjects';
+import { HighlightProjects } from './components/HighlightedProjects';
 
 export const Projects = () => {
   const { t } = useTranslation();
@@ -9,8 +9,8 @@ export const Projects = () => {
   return (
     <div className="flex flex-col gap-10">
       <Title title={t('title_project')} />
-      <div className="flex flex-col gap-28">
-        <HighlightedProjects />
+      <div className="flex flex-col gap-20">
+        <HighlightProjects />
         <AllProjects />
       </div>
     </div>

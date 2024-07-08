@@ -3,11 +3,11 @@ import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 
-import { highlights } from '../../../_shared/constant/highlights';
-import { ProjectCard } from '../../../components/ProjectCard';
-import { Subtitle } from '../../../components/Subtitle';
+import { highlights } from '../../../../_shared/constant/highlights';
+import { Subtitle } from '../../../../components/Subtitle';
+import { HighlightCard } from './components/HighlightCard';
 
-export const HighlightedProjects = () => {
+export const HighlightProjects = () => {
   const { t } = useTranslation();
 
   const sliderRef = useRef<Slider>(null);
@@ -69,7 +69,7 @@ export const HighlightedProjects = () => {
         <Slider ref={sliderRef} {...settings}>
           {highlights.map((highlight, index) => (
             <div key={index} className="px-2">
-              <ProjectCard
+              <HighlightCard
                 key={index}
                 name={highlight.name}
                 html_url={highlight.html_url}

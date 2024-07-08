@@ -1,20 +1,20 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 import Footer from './components/Footer';
 import { Navigation } from './components/Navigation';
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export const MainLayout: React.FC<Props> = ({ children }) => {
   return (
-    <div className="w-full h-screen">
+    <>
       <Navigation />
-      <div className="grow justify-center w-full md:px-14 md:py-[115px] px-9 py-[102px] bg-white dark:bg-stone-900">
+      <div className="grow w-full md:px-14 px-9 pt-[90px] pb-[50px] bg-white dark:bg-[#171717]">
         {children}
       </div>
       <Footer />
-    </div>
+    </>
   );
 };

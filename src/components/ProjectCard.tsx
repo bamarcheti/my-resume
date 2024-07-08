@@ -36,10 +36,11 @@ export const ProjectCard: React.FC<Props> = ({
           {name}
         </a>
       </h1>
-      <ul className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-2 items-center">
+      <ul className="flex flex-wrap items-center gap-1">
         {topics.map((topic, index) => (
-          <li key={index} className="w-full">
-            <p className="w-full cursor-stone-900 font-medium md:font-semibold xl:text-sm flex justify-center text-xs text-purple-600 dark:text-white bg-white dark:bg-purple-400 px-[24px] sm:p-0 rounded-2xl">
+          <li key={index}>
+            {/* <li key={index} className="2xl:w-[120px] xl:w-[126px] "> */}
+            <p className="flex items-center w-full cursor-default font-medium md:font-semibold xl:text-sm sm:text-xs 2xl:text-base text-[10.6px] text-purple-600 dark:text-white bg-white dark:bg-purple-400 px-[3.8px] min-[375px]:px-[10px] md:px-2 rounded-2xl">
               {topic}
             </p>
           </li>
@@ -64,10 +65,10 @@ export const ProjectCard: React.FC<Props> = ({
             href={html_url}
             title={html_url}
             target="_blank"
-            className="flex gap-2 items-center text-sm md:text-base text-stone-900 dark:text-stone-400 hover:underline"
+            className="flex gap-2 items-center text-[11.6px] min-[425px]:text-sm lg:text-base text-stone-900 dark:text-stone-400 hover:underline"
             rel="noreferrer"
           >
-            {t('github')} <ExternalLink className="w-5 h-5" />
+            {t('github')} <ExternalLink className="lg:w-5 lg:h-5 w-4 h-4" />
           </a>
         </div>
       )}

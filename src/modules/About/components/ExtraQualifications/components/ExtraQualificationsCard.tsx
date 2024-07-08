@@ -6,7 +6,7 @@ type Props = {
 };
 
 export const ExtraQualificationsCard = ({ extraQualifications }: Props) => {
-  const fontStyle = 'text-xs xl:text-sm lg:text-sm font-normal';
+  const fontStyle = 'text-xs 2xl:text-base lg:text-sm font-normal';
 
   const iconMap: Record<string, JSX.Element> = {
     course: <GraduationCap className="text-white w-6 h-6" />,

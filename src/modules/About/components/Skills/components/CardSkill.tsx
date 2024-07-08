@@ -6,11 +6,11 @@ type Props = {
 
 export const CardSkill = ({ skills }: Props) => {
   return (
-    <div className="flex flex-wrap gap-2 text-center justify-start sm:justify-center ">
+    <div className="flex flex-wrap gap-3 text-center justify-start sm:justify-center w-full">
       {skills.map((skill, index) => (
         <p
           key={index}
-          className="cursor-stone-900 font-semibold text-xs text-white bg-purple-400 p-3 rounded-2xl transition ease-in-out hover:scale-105 hover:text-stone-900"
+          className="cursor-stone-900 font-semibold text-xs 2xl:text-base text-white bg-butterflyBush-600 p-3 rounded-md transition ease-in-out hover:scale-105 hover:text-stone-200"
         >
           {skill.name}
         </p>

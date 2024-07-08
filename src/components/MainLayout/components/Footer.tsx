@@ -17,11 +17,11 @@ const Footer = () => {
   return (
     <div className="flex flex-col bg-purple-600 dark:bg-stone-800 w-full py-3 md:px-9 px-5 gap-3">
       <div className="flex">
-        <ul className="flex gap-4 md:text-lg font-medium w-full">
+        <ul className="flex gap-4 md:text-lg 2xl:text-[22px] font-medium w-full">
           <Link to={RoutesURL.ABOUT}>
             <li
               className={`${
-                isActiveAbout ? 'opacity-50 dark:text-purple-500' : ''
+                isActiveAbout ? 'text-mineShaft-300 dark:text-butterflyBush-500' : ''
               } text-white cursor-pointer hover:opacity-60 transition-all ease-in-out hover:scale-105`}
             >
               {t('nav_about')}
@@ -30,7 +30,7 @@ const Footer = () => {
           <Link to={RoutesURL.PROJECTS}>
             <li
               className={`${
-                isActiveProject ? 'opacity-50 dark:text-purple-500' : ''
+                isActiveProject ? 'text-mineShaft-300 dark:text-butterflyBush-500' : ''
               } text-white cursor-pointer hover:opacity-60 transition-all ease-in-out hover:scale-105`}
             >
               {t('nav_projects')}
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-col text-white text-xs text-center gap-1">
+      <div className="flex flex-col text-white text-xs 2xl:text-base text-center gap-1">
         <p>©{new Date().getFullYear()} Bárbara MF</p>
         <p>{t('footer')}</p>
       </div>

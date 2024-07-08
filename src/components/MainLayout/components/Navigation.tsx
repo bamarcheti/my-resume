@@ -47,7 +47,7 @@ export const Navigation: React.FC = () => {
           <Link to={RoutesURL.ABOUT}>
             <li
               className={`${
-                isActiveAbout ? 'opacity-50 dark:text-purple-500' : ''
+                isActiveAbout ? 'dark:text-butterflyBush-500' : ''
               } text-white cursor-pointer hover:opacity-60 transition-all ease-in-out hover:scale-105`}
             >
               {t('nav_about')}
@@ -56,7 +56,7 @@ export const Navigation: React.FC = () => {
           <Link to={RoutesURL.PROJECTS}>
             <li
               className={`${
-                isActiveProject ? 'opacity-50 dark:text-purple-500' : ''
+                isActiveProject ? 'dark:text-butterflyBush-500' : ''
               } text-white cursor-pointer hover:opacity-60 transition-all ease-in-out hover:scale-105`}
             >
               {t('nav_projects')}

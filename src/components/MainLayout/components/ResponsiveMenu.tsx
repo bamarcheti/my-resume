@@ -60,7 +60,7 @@ export const ResponsiveMenu: React.FC<ResponsiveMenuProps> = ({
       >
         <li
           className={`${
-            isActiveAbout ? 'opacity-50' : ''
+            isActiveAbout ? 'text-mineShaft-300 dark:text-butterflyBush-500' : ''
           } text-white cursor-pointer hover:opacity-60 transition-all ease-in-out`}
           onClick={() => handleNavigation(RoutesURL.ABOUT)}
         >
@@ -68,7 +68,7 @@ export const ResponsiveMenu: React.FC<ResponsiveMenuProps> = ({
         </li>
         <li
           className={`${
-            isActiveProject ? 'opacity-50' : ''
+            isActiveProject ? 'text-mineShaft-300 dark:text-butterflyBush-500' : ''
           } text-white cursor-pointer hover:opacity-60 transition-all ease-in-out`}
           onClick={() => handleNavigation(RoutesURL.PROJECTS)}
         >

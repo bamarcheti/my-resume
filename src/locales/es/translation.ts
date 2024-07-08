@@ -6,7 +6,7 @@ export const esEs = {
   translation: {
     nav_about: 'Acerca de',
     nav_projects: 'Proyectos',
-    info: 'Brasileña, Soltera, 21 Años',
+    info: 'Brasileña, Soltera, 22 años',
     responsibility: 'Desarrolladora Front-end Junior',
     subtitle_description: 'Descripción',
     description:

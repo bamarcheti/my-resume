@@ -6,7 +6,7 @@ export const ptBR = {
   translation: {
     nav_about: 'Sobre',
     nav_projects: 'Projetos',
-    info: 'Brasileira, Solteira, 21 Anos',
+    info: 'Brasileira, Solteira, 22 anos',
     responsibility: 'Desenvolvedora Front-end Junior',
     subtitle_description: 'Descrição',
     description:

@@ -6,7 +6,7 @@ export const enUS = {
   translation: {
     nav_about: 'About',
     nav_projects: 'Projects',
-    info: 'Brazilian, Single, 21 Years Old',
+    info: 'Brazilian, Single, 22 years old',
     responsibility: 'Junior Front-end Developer',
     subtitle_description: 'Description',
     description:

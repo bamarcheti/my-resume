@@ -16,36 +16,35 @@ export const useExtraQualifications = (): ExtraQualificationsAction[] => {
 export const ExtraQualificationstFilter = () => {
   const extraQualifications = useExtraQualifications();
   const categories = getQualificationsCategories(extraQualifications);
-  const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>(categories[0]);
   const { t } = useTranslation();
 
-  const fontStyle = 'text-xs xl:text-sm lg:text-sm font-normal';
+  const fontStyle = 'text-xs 2xl:text-base lg:text-sm font-normal';
 
   const iconMap: Record<string, JSX.Element> = {
-    course: <GraduationCap className="text-white w-6 h-6" />,
+    startup: <Rocket className="text-white w-6 h-6" />,
     article: <Atom className="text-white w-6 h-6" />,
-    startup: <Rocket className="text-white w-6 h-6" />
+    course: <GraduationCap className="text-white w-6 h-6" />
   };
 
   const styleMap = {
-    course: 'bg-purple-400 dark:bg-stone-800 text-stone-700',
-    article: 'bg-purple-500 dark:bg-stone-600 text-stone-700',
-    startup: 'bg-purple-700 dark:bg-stone-700 text-stone-400'
+    startup: 'bg-butterflyBush-600 dark:bg-stone-800 text-stone-800 dark:text-stone-700',
+    article: 'bg-butterflyBush-600 dark:bg-stone-800 text-stone-800 dark:text-stone-700',
+    course: 'bg-butterflyBush-600 dark:bg-stone-800 text-stone-800 dark:text-stone-700'
   };
 
   const handleSelectCategory = (category: string) => {
-    if (category === selectedCategory) {
-      setSelectedCategory('');
+    if (category !== selectedCategory) {
+      setSelectedCategory(category);
       return;
     }
-    setSelectedCategory(category);
   };
 
   const filteredTechs = getQualificationsFilteredTechs(selectedCategory, extraQualifications);
 
   return (
     <div className="flex flex-col w-full justify-center space-y-5">
-      <div className="flex justify-center md:justify-start">
+      <div className="flex justify-center md:justify-start gap-2">
         {categories.map((cat) => {
           const isActive = selectedCategory === cat;
 
@@ -66,7 +65,7 @@ export const ExtraQualificationstFilter = () => {
             key={index}
             className={`${
               styleMap[tech.type]
-            } flex flex-col rounded-3xl p-8 gap-4 transition ease-in-out hover:scale-105`}
+            } flex flex-col rounded-md p-8 gap-4 transition ease-in-out hover:scale-105`}
           >
             <div className="flex flex-col gap-1.5 justify-center text-center">
               {iconMap[tech.type]}

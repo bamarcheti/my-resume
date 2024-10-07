@@ -42,7 +42,13 @@ export const Navigation: React.FC = () => {
         open ? 'flex-col' : 'justify-between items-center'
       }`}
     >
-      <div className="flex flex-row w-full top-2">
+      <div className="flex flex-row w-full top-2 items-center gap-3">
+        {/* <div className="hidden md:flex gap-3 items-center">
+          <img
+            src="./myPhoto.jpg"
+            className="border-2 2xl:border-[3px] border-white rounded-full w-12 h-12 object-cover"
+          />
+        </div> */}
         <ul className="hidden sm:flex gap-4 text-xl font-semibold w-full">
           <Link to={RoutesURL.ABOUT}>
             <li

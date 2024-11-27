@@ -1,6 +1,7 @@
 # **My Resume**
 
 ![preview](./.github/preview.png)
+![preview](./.github/preview-projetos.png)
 
 Projeto construído com o objetivo de desenvolver um currículo online de forma a facilitar o recrutador a avaliar a minha experiência, criatividade, profissionalismo, componentização e código limpo e o meu desejo de crescer constantemente e conhecer novas tecnologias, metodologias de trabalho e outros.
 

@@ -23,7 +23,7 @@ export const HighlightCard: React.FC<Props> = ({
 
   return (
     <div
-      className={`${className} flex flex-col justify-between space-y-2 rounded-3xl bg-butterflyBush-600 dark:bg-stone-800 p-4 md:p-5 gap-4 w-full md:h-56 h-44`}
+      className={`${className} flex flex-col justify-between space-y-2 rounded-md bg-butterflyBush-600 dark:bg-stone-800 p-4 md:p-5 gap-4 w-full md:h-56 h-44`}
     >
       <h1>
         <a
@@ -40,7 +40,7 @@ export const HighlightCard: React.FC<Props> = ({
         {topics.map((topic, index) => (
           <li key={index}>
             {/* <li key={index} className="2xl:w-[120px] xl:w-[126px] "> */}
-            <p className="flex items-center w-full cursor-default font-medium md:font-semibold lg:text-sm text-xs 2xl:text-base text-purple-600 dark:text-white bg-white dark:bg-purple-400 px-[3.8px] min-[375px]:px-[10px] md:px-2 rounded-2xl">
+            <p className="flex items-center w-full cursor-default font-medium md:font-semibold lg:text-sm text-xs 2xl:text-base text-purple-600 dark:text-white bg-white dark:bg-purple-400 px-[3.8px] min-[375px]:px-[10px] md:px-2 rounded-md">
               {topic}
             </p>
           </li>

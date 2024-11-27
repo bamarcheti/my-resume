@@ -1,3 +1,4 @@
+import { RefreshCw } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Subtitle } from '../../../../components/Subtitle';
@@ -15,6 +16,7 @@ export interface Repo {
 
 export const AllProjects = () => {
   const [repos, setRepos] = useState<Repo[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const { t } = useTranslation();
 
   const fetchRepos = async () => {
@@ -31,7 +33,10 @@ export const AllProjects = () => {
         (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
       );
 
-      setRepos(sortedRepos);
+      setTimeout(() => {
+        setRepos(sortedRepos);
+        setIsLoading(false);
+      }, 250);
     } catch (error) {
       console.error('Erro ao buscar repositórios do GitHub', error);
     }
@@ -44,19 +49,25 @@ export const AllProjects = () => {
   return (
     <div className="flex flex-col gap-3">
       <Subtitle subtitle={t('all')} />
-      <ul className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-        {repos.map((repo) => (
-          <li key={repo.id}>
-            <AllProjectsCard
-              name={repo.name}
-              html_url={repo.html_url}
-              topics={repo.topics}
-              homepage={repo.homepage}
-              previewImageUrl={repo.previewImageUrl}
-            />
-          </li>
-        ))}
-      </ul>
+      {isLoading ? (
+        <div className="flex justify-center">
+          <RefreshCw className="animate-spin h-8 w-8 text-butterflyBush-600 dark:text-white" />
+        </div>
+      ) : (
+        <ul className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+          {repos.map((repo) => (
+            <li key={repo.id}>
+              <AllProjectsCard
+                name={repo.name}
+                html_url={repo.html_url}
+                topics={repo.topics}
+                homepage={repo.homepage}
+                previewImageUrl={repo.previewImageUrl}
+              />
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

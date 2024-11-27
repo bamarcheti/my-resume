@@ -23,7 +23,7 @@ export const AllProjectsCard: React.FC<Props> = ({
 
   return (
     <div
-      className={`${className} flex flex-col justify-between space-y-2 rounded-3xl bg-purple-400 dark:bg-stone-800 p-4 md:p-5 gap-4 w-full h-full`}
+      className={`${className} flex flex-col justify-between space-y-2 rounded-3xl bg-butterflyBush-600 dark:bg-stone-800 p-4 md:p-5 gap-4 w-full h-full`}
     >
       <h1>
         <a

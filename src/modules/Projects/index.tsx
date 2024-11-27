@@ -7,7 +7,7 @@ export const Projects = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-3">
       <Title title={t('title_project')} />
       <div className="flex flex-col gap-20">
         <HighlightProjects />

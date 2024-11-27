@@ -23,7 +23,7 @@ export const HighlightCard: React.FC<Props> = ({
 
   return (
     <div
-      className={`${className} flex flex-col justify-between space-y-2 rounded-3xl bg-purple-400 dark:bg-stone-800 p-4 md:p-5 gap-4 w-full md:h-56 h-44`}
+      className={`${className} flex flex-col justify-between space-y-2 rounded-3xl bg-butterflyBush-600 dark:bg-stone-800 p-4 md:p-5 gap-4 w-full md:h-56 h-44`}
     >
       <h1>
         <a

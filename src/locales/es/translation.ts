@@ -6,11 +6,11 @@ export const esEs = {
   translation: {
     nav_about: 'Acerca de',
     nav_projects: 'Proyectos',
-    info: 'Brasileña, Soltera, 22 años',
+    info: 'Brasileña, 22 años',
     responsibility: 'Desarrolladora Front-end Junior',
     subtitle_description: 'Descripción',
     description:
-      'Soy graduada en Análisis y Desarrollo de Sistemas (TADS) en la Faculdade Insted. Llevo 2 años trabajando en programación, con un fuerte interés y pasión por esta área. Comencé con Vue.js y luego pasé a React.js. Actualmente, utilizo React.js, Tailwind, TypeScript y Next.js, junto con bibliotecas como Headless UI, react-router-dom, entre otras. También he utilizado Material UI y Styled-components en otros proyectos. En el trabajo, desarrollo proyectos como Holerite, Carreras y el sitio web de la empresa, todos centrados en la usabilidad, utilidad, deseabilidad y capacidad de respuesta del usuario. Siempre estoy estudiando y buscando mejorar. Estoy disponible para trabajar en cualquier modelo de trabajo que la empresa ofrezca: presencial, híbrido o remoto.',
+      'Soy graduada en Análisis y Desarrollo de Sistemas (TADS) en la Faculdade Insted. Llevo 3 años trabajando en programación, con un fuerte interés y pasión por esta área. Comencé con Vue.js y luego pasé a React.js. Actualmente, utilizo React.js, Tailwind, TypeScript y Next.js, junto con bibliotecas como Headless UI, react-router-dom, entre otras. También he utilizado Material UI y Styled-components en otros proyectos. En el trabajo, desarrollo proyectos como Holerite, Carreras y el sitio web de la empresa, todos centrados en la usabilidad, utilidad, deseabilidad y capacidad de respuesta del usuario. Siempre estoy estudiando y buscando mejorar. Estoy disponible para trabajar en cualquier modelo de trabajo que la empresa ofrezca: presencial, híbrido o remoto.',
     subtitle_skills: 'Habilidades',
     strong_title: 'Fuerte',
     strongSkills: skillsES.filter((skill) => skill.strength === 'strong'),
@@ -36,8 +36,8 @@ export const esEs = {
     title_project: 'Proyectos',
     highlight: 'Reflejos',
     all: 'Todos',
-    acess: 'Haga clic aquí para acceder',
-    github: 'Acceder o repositório',
+    acess: 'Accede al proyecto',
+    github: 'Accede o repositório',
     footer: 'Todos los derechos reservados'
   }
 };

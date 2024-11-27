@@ -6,11 +6,11 @@ export const enUS = {
   translation: {
     nav_about: 'About',
     nav_projects: 'Projects',
-    info: 'Brazilian, Single, 22 years old',
+    info: 'Brazilian, 22 years old',
     responsibility: 'Junior Front-end Developer',
     subtitle_description: 'Description',
     description:
-      "I have a degree in System Analysis and Development at Faculdade Insted. I've been working in programming for 2 years. I started with Vue.js, and today I use tools such as: React.js. In the project I'm on we use React.js, Next.js, TypeScript, Tailwind, Prettier, and ESLint, along with Headless UI, react-router-dom, and others. I have also used Material UI and styled-components in other projects. I work on internal company projects, including the People Management System and the company's website. All projects focus on user usability and accessibility, responsiveness for desktop, tablet, and mobile, API integration, as well as clean architecture and code. I am available to work in any work model the company offers: in-person, hybrid, or remote.",
+      "I have a degree in System Analysis and Development at Faculdade Insted. I've been working in programming for 3 years. I started with Vue.js, and today I use tools such as: React.js. In the project I'm on we use React.js, Next.js, TypeScript, Tailwind, Prettier, and ESLint, along with Headless UI, react-router-dom, and others. I have also used Material UI and styled-components in other projects. I work on internal company projects, including the People Management System and the company's website. All projects focus on user usability and accessibility, responsiveness for desktop, tablet, and mobile, API integration, as well as clean architecture and code. I am available to work in any work model the company offers: in-person, hybrid, or remote.",
     subtitle_skills: 'Skills',
     strong_title: 'Strong',
     strongSkills: skillsEN.filter((skill) => skill.strength === 'strong'),
@@ -35,8 +35,8 @@ export const enUS = {
     title_project: 'Projects',
     highlight: 'Highlights',
     all: 'All',
-    acess: 'Click here to access',
-    github: 'Acess the repository',
+    acess: 'Access the project',
+    github: 'Access the repository',
     footer: 'All rights reserved'
   }
 };

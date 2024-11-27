@@ -6,11 +6,11 @@ export const ptBR = {
   translation: {
     nav_about: 'Sobre',
     nav_projects: 'Projetos',
-    info: 'Brasileira, Solteira, 22 anos',
+    info: 'Brasileira, 22 anos',
     responsibility: 'Desenvolvedora Front-end Junior',
     subtitle_description: 'Descrição',
     description:
-      'Sou graduada em Análise e Desenvolvimento de Sistemas (TADS) na Faculdade Insted. Trabalho a 2 anos com programação. Tenho bastante interesse e paixão por essa área. Eu iniciei com Vue.js e depois com React.js. No momento tenho utilizado React.js, Tailwind, TypeScript e Next.js, algumas libs são Headless UI, react-router-dom e outras. Eu já utilizei material ui e também styled-components em outro projeto. No trabalho desenvolvo projetos como Holerite, Carreiras e site. Todos em foco na usabilidade, utilidade e desejabilidade do usuário e responsividade. Estou sempre estudando e procurando melhorar. Tenho disponibilidade para trabalhar em qualquer modelo de trabalho que a empresa ofertar: presencial, híbrido ou remoto.',
+      'Sou graduada em Análise e Desenvolvimento de Sistemas (TADS) na Faculdade Insted. Trabalho a 3 anos com programação. Tenho bastante interesse e paixão por essa área. Eu iniciei com Vue.js e depois com React.js. No momento tenho utilizado React.js, Tailwind, TypeScript e Next.js, algumas libs são Headless UI, react-router-dom e outras. Eu já utilizei material ui e também styled-components em outro projeto. No trabalho desenvolvo projetos como Holerite, Carreiras e site. Todos em foco na usabilidade, utilidade e desejabilidade do usuário e responsividade. Estou sempre estudando e procurando melhorar. Tenho disponibilidade para trabalhar em qualquer modelo de trabalho que a empresa ofertar: presencial, híbrido ou remoto.',
     subtitle_skills: 'Habilidades',
     strong_title: 'Forte',
     strongSkills: skillsPT.filter((skill) => skill.strength === 'strong'),
@@ -35,7 +35,7 @@ export const ptBR = {
     title_project: 'Projetos',
     highlight: 'Destaques',
     all: 'Todos',
-    acess: 'Clique aqui para acessar',
+    acess: 'Acesse o projeto',
     github: 'Acesse o repositório',
     footer: 'Todos os direitos reservados'
   }

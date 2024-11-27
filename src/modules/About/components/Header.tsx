@@ -16,7 +16,7 @@ export const Header = () => {
         </div>
         <p className="font-normal text-base text-stone-500">Campo Grande, Mato Grosso do Sul</p>
       </div>
-      <p className="cursor-stone-900 z-10 font-semibold text-3xl capitalize text-purple-400 dark:text-butterflyBush-600 transition ease-in-out hover:translate-x-1 hover:-translate-y-1">
+      <p className="cursor-stone-900 z-0 font-semibold text-3xl capitalize text-purple-400 dark:text-butterflyBush-600 transition ease-in-out hover:translate-x-1 hover:-translate-y-1">
         {t('responsibility')}
       </p>
     </div>

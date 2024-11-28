@@ -54,7 +54,7 @@ export const AllProjects = () => {
           <RefreshCw className="animate-spin h-8 w-8 text-butterflyBush-600 dark:text-white" />
         </div>
       ) : (
-        <ul className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+        <ul className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 md:gap-4">
           {repos.map((repo) => (
             <li key={repo.id}>
               <AllProjectsCard

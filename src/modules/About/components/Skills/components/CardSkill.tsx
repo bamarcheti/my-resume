@@ -6,7 +6,7 @@ type Props = {
 
 export const CardSkill = ({ skills }: Props) => {
   return (
-    <div className="flex flex-wrap gap-3 text-center justify-start sm:justify-center w-full">
+    <div className="flex flex-wrap gap-3 text-center justify-start lg:justify-center w-full">
       {skills.map((skill, index) => (
         <p
           key={index}

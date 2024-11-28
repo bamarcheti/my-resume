@@ -11,7 +11,7 @@ export const Skills = () => {
       <div className="flex flex-col justify-between items-start">
         <Subtitle subtitle={t('subtitle_skills')} />
       </div>
-      <div className="flex md:flex-row flex-col gap-6 md:gap-8 justify-center">
+      <div className="flex lg:flex-row flex-col gap-6 md:gap-8 justify-center">
         <StrongSkill />
         <AverageSkill />
         <WeakSkill />

@@ -44,7 +44,7 @@ export const ExtraQualificationstFilter = () => {
 
   return (
     <div className="flex flex-col w-full justify-center space-y-5">
-      <div className="flex justify-center md:justify-start gap-2">
+      <div className="flex justify-start gap-2">
         {categories.map((cat) => {
           const isActive = selectedCategory === cat;
 
@@ -59,7 +59,7 @@ export const ExtraQualificationstFilter = () => {
         })}
       </div>
 
-      <div className="grid md:grid-cols-3 grid-cols-1 w-full gap-5">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-5">
         {filteredTechs.map((tech, index) => (
           <div
             key={index}

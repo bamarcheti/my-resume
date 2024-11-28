@@ -40,7 +40,7 @@ export const HighlightCard: React.FC<Props> = ({
         {topics.map((topic, index) => (
           <li key={index}>
             {/* <li key={index} className="2xl:w-[120px] xl:w-[126px] "> */}
-            <p className="flex items-center w-full cursor-default font-medium md:font-semibold lg:text-sm text-xs 2xl:text-base text-purple-600 dark:text-white bg-white dark:bg-purple-400 px-[3.8px] min-[375px]:px-[10px] md:px-2 rounded-md">
+            <p className="flex items-center w-full cursor-default font-semibold lg:text-sm text-xs 2xl:text-base text-purple-600 dark:text-white bg-white dark:bg-purple-400 px-[3.8px] min-[375px]:px-[10px] md:px-2 rounded-md">
               {topic}
             </p>
           </li>
@@ -56,7 +56,7 @@ export const HighlightCard: React.FC<Props> = ({
             className="flex gap-2 items-center text-sm md:text-base text-stone-900 dark:text-stone-400 hover:underline"
             rel="noreferrer"
           >
-            {t('acess')} <ExternalLink className="w-5 h-5" />
+            {t('acess')} <ExternalLink className="lg:w-5 lg:h-5 w-4 h-4" />
           </a>
         </div>
       ) : (

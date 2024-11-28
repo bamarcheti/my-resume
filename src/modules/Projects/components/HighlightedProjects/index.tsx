@@ -30,7 +30,7 @@ export const HighlightProjects = () => {
         }
       },
       {
-        breakpoint: 425,
+        breakpoint: 671,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1

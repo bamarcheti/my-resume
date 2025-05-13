@@ -17,7 +17,7 @@ export const esEs = {
     team_work: 'Trabajo en Equipo',
     average_title: 'Promedio',
     averageSkills: skillsES.filter((skill) => skill.strength === 'average'),
-    weak_title: 'Débil',
+    beginner_title: 'Principiante',
     weakSkills: skillsES.filter((skill) => skill.strength === 'weak'),
     subtitle_graduation: 'Educación Académica',
     graduation: {

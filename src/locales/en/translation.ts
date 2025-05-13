@@ -16,7 +16,7 @@ export const enUS = {
     strongSkills: skillsEN.filter((skill) => skill.strength === 'strong'),
     average_title: 'Average',
     averageSkills: skillsEN.filter((skill) => skill.strength === 'average'),
-    weak_title: 'Weak',
+    beginner_title: 'Beginner',
     weakSkills: skillsEN.filter((skill) => skill.strength === 'weak'),
     subtitle_graduation: 'Academic Education',
     graduation: {

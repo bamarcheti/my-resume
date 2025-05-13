@@ -16,7 +16,7 @@ export const ptBR = {
     strongSkills: skillsPT.filter((skill) => skill.strength === 'strong'),
     average_title: 'Média',
     averageSkills: skillsPT.filter((skill) => skill.strength === 'average'),
-    weak_title: 'Fraco',
+    beginner_title: 'Iniciante',
     weakSkills: skillsPT.filter((skill) => skill.strength === 'weak'),
     subtitle_graduation: 'Graduação Acadêmica',
     graduation: {

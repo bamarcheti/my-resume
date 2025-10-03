@@ -1,7 +1,6 @@
-// api/github.ts
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-const GH_GRAPHQL = 'https://api.github.com/graphql';
+const GH_GRAPHQL = process.env.GH_GRAPHQL || 'https://api.github.com/graphql';
 const TOKEN = process.env.GH_TOKEN!;
 const LOGIN = process.env.GH_USERNAME || 'bamarcheti';
 

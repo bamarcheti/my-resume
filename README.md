@@ -1,73 +1,49 @@
-# Welcome to your Lovable project
+# **My Resume**
 
-## Project info
+![preview](./.github/preview.png)
+![preview](./.github/preview-projetos.png)
 
-**URL**: https://lovable.dev/projects/341f9f52-c902-4b90-bc25-09f003d32c22
+Projeto construído com o objetivo de desenvolver um currículo online de forma a facilitar o recrutador a avaliar a minha experiência, criatividade, profissionalismo, componentização e código limpo e o meu desejo de crescer constantemente e conhecer novas tecnologias, metodologias de trabalho e outros.
 
-## How can I edit this code?
+[🔗 Clique aqui para acessar](https://bamarcheti.dev.br)
 
-There are several ways of editing your application.
 
-**Use Lovable**
+## **🛠 Tecnologias**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/341f9f52-c902-4b90-bc25-09f003d32c22) and start prompting.
+![Reactjs](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-Changes made via Lovable will be committed automatically to this repo.
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Babel](https://img.shields.io/badge/Babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=white)
+![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)
+![Eslint](https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white)
 
-**Use your preferred IDE**
+![Yarn](https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white)
+![Editor Config](https://img.shields.io/badge/Editor%20Config-E0EFEF?style=for-the-badge&logo=editorconfig&logoColor=000)
+![Visual Studio Code](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## **✨ Como executar**
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **_[README-install](./README-install.md)_**
 
-Follow these steps:
+## **💄 Layout**
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Para você poder visualizar o layout do projeto é necessário acessar o link abaixo:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- [Layout](https://lovable.dev/projects/341f9f52-c902-4b90-bc25-09f003d32c22)
 
-# Step 3: Install the necessary dependencies.
-npm i
+Lembrando que você precisa ter uma conta no [Lovable](https://lovable.dev).
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## **💛 Contato**
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/341f9f52-c902-4b90-bc25-09f003d32c22) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+[<img src='https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About&logoColor=white' alt='Website' height='30'>](https://my-resume-bamarcheti.vercel.app/)
+[<img src='https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white' alt='Discord' height='30'>](https://discord.com/channels/@ba_marcheti#3824)
+[<img src='https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white' alt='Instagram' height='30'>](https://www.instagram.com/ba_marcheti)
+[<img src='https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white' alt='Linkedin' height='30'>](https://www.linkedin.com/in/barbara-marcheti-fiorin/)
+[<img src='https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white' alt='Gmail' height='30'>](bmarchetifiorin@gmail.com)

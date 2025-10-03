@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Portfolio Design System - Purple Theme */
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --background: 0 0% 100%;
+    --foreground: 224 15% 15%;
+
+    /* Card System */
+    --card: 0 0% 100%;
+    --card-foreground: 224 15% 15%;
+
+    /* Purple Brand Colors */
+    --primary: 262 65% 65%; /* Main purple */
+    --primary-dark: 262 65% 55%; /* Darker purple */
+    --primary-light: 262 50% 85%; /* Light purple */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary Colors */
+    --secondary: 220 13% 95%;
+    --secondary-foreground: 224 15% 25%;
+
+    /* Neutral System */
+    --muted: 220 13% 95%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 262 50% 95%;
+    --accent-foreground: 262 65% 25%;
+
+    /* Status Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+
+    /* UI Elements */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262 65% 65%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(262 65% 65%),
+      hsl(262 65% 55%)
+    );
+    --gradient-light: linear-gradient(
+      135deg,
+      hsl(262 50% 95%),
+      hsl(220 13% 95%)
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(262 65% 65%) 0%,
+      hsl(252 70% 70%) 100%
+    );
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(262 65% 65% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(262 65% 65% / 0.1),
+      0 2px 4px -1px hsl(262 65% 65% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(262 65% 65% / 0.1),
+      0 4px 6px -2px hsl(262 65% 65% / 0.05);
+    --shadow-purple: 0 10px 30px -10px hsl(262 65% 65% / 0.3);
+
+    /* Layout */
+    --radius: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    /* --primary: 220 13% 95%; */
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --gradient-dark: linear-gradient(var(--brand) / 0.14, hsl(240 5% 12%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Utilitários para o CTA no dark mode */
+@layer utilities {
+  /* fundo roxo translúcido no dark */
+  .bg-cta-dark {
+    background-color: hsl(var(--brand) / 0.14);
+  }
+  /* borda sutil com a mesma cor */
+  .border-cta-dark {
+    border-color: hsl(var(--brand) / 0.25);
+  }
+  /* ícones/elementos com o roxo de marca (quando precisar) */
+  .text-brand {
+    color: hsl(var(--brand));
+  }
+}
+
+/* Utilitários para aplicar facilmente os fundos */
+/* @layer utilities { */
+/* se quiser continuar usando as classes 'bg-gradient-*' no projeto */
+/* .bg-gradient-light {
+    background-image: var(--gradient-light);
+  }
+  .bg-gradient-dark {
+    background-image: var(--gradient-dark);
+  } */
+
+/* pedido: bg-light para light e bg-dark para dark */
+/* .bg-light {
+    background-image: var(--gradient-light);
+  }
+  .bg-dark {
+    background-image: var(--gradient-dark);
+  } */
+
+/* (opcional) garantir que o gradiente ocupe tudo e não repita */
+/* .bg-light,
+  .bg-dark,
+  .bg-gradient-light,
+  .bg-gradient-dark {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+} */

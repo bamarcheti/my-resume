@@ -5,63 +5,20 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { socialLinks } from '@/helpers/socialLinks';
-import { useToast } from '@/hooks/use-toast';
-import { zodResolver } from '@hookform/resolvers/zod';
 import { Mail, MapPin, MessageCircle, Phone, Send } from 'lucide-react';
-import { useForm } from 'react-hook-form';
+import { useState } from 'react';
+import { toast } from 'sonner';
 import { z } from 'zod';
 
 // ===== schema & tipos =====
 const schema = z.object({
   name: z.string().min(2, 'Informe seu nome'),
   email: z.string().email('Email inválido'),
-  subject: z.string().min(3, 'Tema da mensagem'),
+  phone: z.string().min(8, 'Telefone inválido'),
   message: z.string().min(10, 'Mensagem muito curta'),
   company: z.string().optional() // honeypot
 });
 type FormValues = z.infer<typeof schema>;
-
-// ===== Web3Forms =====
-const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
-const WEB3FORMS_KEY =
-  (import.meta.env.VITE_WEB3FORMS_KEY as string) ?? 'e5cf8d48-61b1-4d22-8790-6c524742932e';
-
-// ===== rate-limit & duplicados =====
-const COOLDOWN_MS = 30_000; // 30s entre envios
-const DUP_TTL_MS = 24 * 60 * 60 * 1000; // 24h p/ bloquear msg idêntica
-const LS_LAST_KEY = 'contact:lastSentAt';
-const LS_HIST_KEY = 'contact:history'; // [{ id: string, ts: number }]
-
-// hash estável do conteúdo (usa Web Crypto quando disponível)
-async function contactId(v: FormValues) {
-  const canonical = JSON.stringify({
-    email: v.email.trim().toLowerCase(),
-    subject: v.subject.trim().toLowerCase(),
-    message: v.message.trim().toLowerCase()
-  });
-
-  if (crypto?.subtle) {
-    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(canonical));
-    return Array.from(new Uint8Array(buf))
-      .map((b) => b.toString(16).padStart(2, '0'))
-      .join('');
-  }
-  // fallback simples
-  let h = 0;
-  for (let i = 0; i < canonical.length; i++) h = (h * 31 + canonical.charCodeAt(i)) | 0;
-  return String(h);
-}
-
-function getHistory(): { id: string; ts: number }[] {
-  try {
-    return JSON.parse(localStorage.getItem(LS_HIST_KEY) || '[]');
-  } catch {
-    return [];
-  }
-}
-function saveHistory(items: { id: string; ts: number }[]) {
-  localStorage.setItem(LS_HIST_KEY, JSON.stringify(items));
-}
 
 // ===== dados estáticos =====
 const CONTACT_INFO = [
@@ -95,100 +52,57 @@ function FieldError({ id, message }: { id: string; message?: string }) {
 }
 
 export default function Contact() {
-  const { toast } = useToast();
+  const [formData, setFormData] = useState<FormValues>({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [errors, setErrors] = useState<Partial<Record<keyof FormValues, string>>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { isSubmitting, errors }
-  } = useForm<FormValues>({ resolver: zodResolver(schema) });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
 
-  const onSubmit = async (values: FormValues) => {
+    // limpa erro do campo editado
+    setErrors((prev) => ({ ...prev, [name as keyof FormValues]: undefined }));
+  };
+
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // valida com Zod
+    const parsed = schema.safeParse(formData);
+    if (!parsed.success) {
+      const fieldErrors: Partial<Record<keyof FormValues, string>> = {};
+      for (const issue of parsed.error.issues) {
+        const path = issue.path[0] as keyof FormValues;
+        if (!fieldErrors[path]) fieldErrors[path] = issue.message;
+      }
+      setErrors(fieldErrors);
+      toast.error('Por favor, corrija os campos destacados.');
+      return;
+    }
+
+    // honeypot: se preenchido, ignora
+    if (formData.company && formData.company.trim() !== '') {
+      setFormData({ name: '', email: '', phone: '', message: '', company: '' });
+      return;
+    }
+
+    setIsSubmitting(true);
+
     try {
-      // honeypot
-      if (values.company && values.company.trim() !== '') {
-        reset();
-        return;
-      }
+      const whatsappMsg = `Olá! Me chamo ${formData.name}. Email: ${formData.email}. Telefone: ${formData.phone}. Mensagem: ${formData.message}`;
+      const whatsappUrl = `https://wa.me/5567996197943?text=${encodeURIComponent(whatsappMsg)}`;
+      window.open(whatsappUrl, '_blank');
+      toast.success('Redirecionando para WhatsApp...');
 
-      // ---- rate limit (cooldown) ----
-      const now = Date.now();
-      const last = Number(localStorage.getItem(LS_LAST_KEY) || '0');
-      const left = COOLDOWN_MS - (now - last);
-      if (left > 0) {
-        const sec = Math.ceil(left / 1000);
-        toast({
-          title: 'Aguarde um instante 🙂',
-          description: `Você poderá enviar novamente em ${sec}s.`,
-          variant: 'destructive'
-        });
-        return;
-      }
-
-      // ---- evita repetição da mesma mensagem por 24h ----
-      const id = await contactId(values);
-      const hist = getHistory();
-      const recent = hist.find((h) => h.id === id && now - h.ts < DUP_TTL_MS);
-      if (recent) {
-        const mins = Math.ceil((DUP_TTL_MS - (now - recent.ts)) / 60000);
-        toast({
-          title: 'Mensagem já enviada',
-          description: `Parece igual a uma mensagem enviada recentemente. Tente novamente em ~${mins}min se precisar.`,
-          variant: 'destructive'
-        });
-        return;
-      }
-
-      // Envia como application/x-www-form-urlencoded (evita preflight/CORS)
-      const payload = new URLSearchParams();
-      payload.set('access_key', WEB3FORMS_KEY);
-      payload.set('name', values.name);
-      payload.set('email', values.email);
-      payload.set('subject', `[Portfólio] ${values.subject}`);
-      payload.set('message', values.message);
-      payload.set('botcheck', values.company ?? '');
-      payload.set('from_name', 'Formulário do Portfólio');
-      payload.set('replyto', values.email);
-      payload.set('origin', window.location.origin);
-      payload.set('page', window.location.href);
-
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 12000);
-
-      const res = await fetch(WEB3FORMS_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-          Accept: 'application/json'
-        },
-        body: payload.toString(),
-        signal: controller.signal
-      });
-
-      clearTimeout(timeout);
-      const data = await res.json().catch(() => ({} as any));
-
-      if (res.ok && (data?.success ?? true)) {
-        // ok: grava cooldown + histórico
-        localStorage.setItem(LS_LAST_KEY, String(now));
-        const pruned = hist.filter((h) => now - h.ts < DUP_TTL_MS);
-        saveHistory([{ id, ts: now }, ...pruned].slice(0, 20));
-
-        toast({
-          title: 'Mensagem enviada!',
-          description: 'Obrigado pelo contato.'
-        });
-        reset();
-      } else {
-        throw new Error(data?.message || 'Falha ao enviar');
-      }
-    } catch (err: any) {
-      toast({
-        title: 'Falha ao enviar',
-        description: err?.message ?? 'Tente novamente mais tarde.',
-        variant: 'destructive'
-      });
+      setFormData({ name: '', email: '', phone: '', message: '', company: '' });
+      setErrors({});
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -212,18 +126,20 @@ export default function Contact() {
               <CardHeader>
                 <CardTitle className="flex items-center text-2xl">
                   <MessageCircle className="w-6 h-6 mr-2 text-primary" />
-                  Envie uma Mensagem
+                  Entre em Contato!
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
+                <form onSubmit={onSubmit} className="space-y-6" noValidate>
                   {/* honeypot */}
                   <input
                     type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
                     className="hidden"
                     tabIndex={-1}
                     autoComplete="off"
-                    {...register('company')}
                   />
 
                   <div className="grid md:grid-cols-2 gap-4">
@@ -231,51 +147,59 @@ export default function Contact() {
                       <Label htmlFor="name">Nome *</Label>
                       <Input
                         id="name"
+                        name="name"
                         placeholder="Seu nome completo"
-                        {...register('name')}
+                        value={formData.name}
+                        onChange={handleChange}
                         aria-invalid={!!errors.name}
                         aria-describedby="err-name"
                       />
-                      <FieldError id="err-name" message={errors.name?.message} />
+                      <FieldError id="err-name" message={errors.name} />
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="email">Email *</Label>
                       <Input
                         id="email"
+                        name="email"
                         type="email"
                         placeholder="seu.email@exemplo.com"
-                        {...register('email')}
+                        value={formData.email}
+                        onChange={handleChange}
                         aria-invalid={!!errors.email}
                         aria-describedby="err-email"
                       />
-                      <FieldError id="err-email" message={errors.email?.message} />
+                      <FieldError id="err-email" message={errors.email} />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Assunto *</Label>
+                    <Label htmlFor="phone">Telefone *</Label>
                     <Input
-                      id="subject"
-                      placeholder="Sobre o que gostaria de falar?"
-                      {...register('subject')}
-                      aria-invalid={!!errors.subject}
-                      aria-describedby="err-subject"
+                      id="phone"
+                      name="phone"
+                      placeholder="(67) 9619-7943"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      aria-invalid={!!errors.phone}
+                      aria-describedby="err-phone"
                     />
-                    <FieldError id="err-subject" message={errors.subject?.message} />
+                    <FieldError id="err-phone" message={errors.phone} />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="message">Mensagem *</Label>
                     <Textarea
                       id="message"
+                      name="message"
                       placeholder="Descreva seu projeto ou dúvida..."
                       className="min-h-[120px]"
-                      {...register('message')}
+                      value={formData.message}
+                      onChange={handleChange}
                       aria-invalid={!!errors.message}
                       aria-describedby="err-message"
                     />
-                    <FieldError id="err-message" message={errors.message?.message} />
+                    <FieldError id="err-message" message={errors.message} />
                   </div>
 
                   <Button

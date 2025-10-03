@@ -24,6 +24,11 @@ dist-ssr
 *.sw?
 
 # Environment Variables
-.env
-.env.build
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+*.env
+
 .vercel

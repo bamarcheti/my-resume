@@ -13,7 +13,7 @@ export default function Projects() {
   const [selected, setSelected] = useState<ProjectCategory>('Todos');
   const [visible, setVisible] = useState(PROJECTS_PAGE_SIZE);
   const { loading, error, featured, all, categories } = useProjects();
-  const githubUser = process.env.VITE_GH_USERNAME || 'bamarcheti'; // só para CTA/link
+  const githubUser = import.meta.env.VITE_GH_USERNAME || 'bamarcheti';
 
   const CATEGORIES: ProjectCategory[] = useMemo(() => {
     const seen = new Set<ProjectCategory>(['Todos']);
